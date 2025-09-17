@@ -6,19 +6,23 @@
     <!-- Main Content -->
     <div class="home-content">
       <NavBar></NavBar>
-      <div>
-        <p>
-          Page body content
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique vehicula feugiat. Fusce rutrum gravida
-          libero, at maximus lorem ultrices non. Phasellus et nunc rhoncus, consectetur odio id, tristique magna. Sed
-          consequat accumsan magna eget aliquam. Fusce a consectetur erat. Morbi feugiat, mauris at porttitor ullamcorper,
-          nisl magna facilisis ante, eget sollicitudin arcu enim vel neque. Etiam nec diam orci. Ut ac massa fringilla nunc
-          mattis blandit. Aenean id velit quis est sodales congue nec vel nulla. Proin volutpat, ante et euismod cursus,
-          nunc massa maximus purus, sit amet auctor sapien leo eu lectus.
-        </p>
-      </div>
+      <section id="home">
+        <div class="main-title">
+          <p>
+            Oi, Eu sou
+          </p>
+          <div class="my-name">Lucas Costa</div>
+        </div>
+        <div class="sub-title">
+          <p>
+            Desenvolvedor de Software
+          </p>
+        </div>
+        <div class="social-media">
+          <span>Linkedin</span> |
+          <span>Github</span>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -62,6 +66,25 @@ export default {
   position: relative;
   z-index: 1;
   color: white;
+  padding: 0 1rem;
+}
+.my-name {
+  color: goldenrod;
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 0.8;
+}
+.main-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.sub-title {
+  color: #afafaf;
+  font-size: 1.3rem;
+}
+.social-media {
+  color: #afafaf;
+  font-size: 1.3rem;
 }
 
 /**
