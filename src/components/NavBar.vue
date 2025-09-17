@@ -70,6 +70,6 @@ export default {
 <style scoped>
 .dark-bg {
   background-color: #011518;
-  color: rgb(175, 175, 175);
+  color: #afafaf;
 }
 </style>
