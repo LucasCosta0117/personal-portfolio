@@ -2,11 +2,11 @@
   <!-- NavBar Mobile -->
   <v-app-bar
     flat
-    height="100"
+    height="80"
     class="dark-bg"
     v-if="isMobile"
   >
-    <div class="ml-4 navbar-profile-img">Foto 3x4</div>
+    <div class="ml-4 navbar-profile-img"></div>
     <v-spacer></v-spacer>
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
   </v-app-bar>
@@ -31,7 +31,9 @@
     class="dark-bg"
   >
     <v-list>
-      <v-list-item>Foto 3x4</v-list-item>
+      <v-list-item>
+        <div class="navbar-profile-img"></div>
+      </v-list-item>
       <v-divider></v-divider>
       <v-list-item
         v-for="item in menuItens" :key="item.id"
@@ -72,5 +74,14 @@ export default {
 .dark-bg {
   background-color: #011518;
   color: #afafaf;
+}
+.navbar-profile-img {
+  height: 48px;
+  width: 48px;
+  border-radius: 1rem;
+  border: 1px solid #afafafad;
+  background-image: url("@/assets/profile_3x4.jpg");
+  background-position: center;
+  background-size: cover;
 }
 </style>
