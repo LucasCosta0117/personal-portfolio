@@ -5,11 +5,10 @@
 
     <!-- Main Content -->
     <div class="home-content">
-      <NavBar></NavBar>
       <section id="home">
         <div class="main-title">
           <p>
-            Oi, Eu sou
+            Olá, Eu sou
           </p>
           <div class="my-name">Lucas Costa</div>
         </div>
@@ -19,8 +18,12 @@
           </p>
         </div>
         <div class="social-media">
-          <span>Linkedin</span> |
-          <span>Github</span>
+          <a :href="urlLinkedin" target="_blank">
+            <span class="mdi mdi-linkedin"></span>
+          </a>
+          <a :href="urlGithub" target="_blank">
+            <span class="mdi mdi-github"></span>
+          </a>
         </div>
       </section>
     </div>
@@ -28,22 +31,24 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
-
 export default {
   name: 'HelloWorld',
-  components: {
-    NavBar
-  },
+  components: {},
   data() {
     return {
-      //
+      urlLinkedin: 'https://www.linkedin.com/in/lucas-costa-5a14a8239/',
+      urlGithub: 'https://github.com/LucasCosta0117',
     }
   },
 }
 </script>
 <style scoped>
 .home-container {
+  /* Important Variables */
+  --roxo: #6c23af;
+  --cinza: #afafaf;
+
+  /* CSS */
   height: 100%;
   background: transparent;
 }
@@ -68,10 +73,17 @@ export default {
   color: white;
   padding: 0 1rem;
 }
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
 .my-name {
   color: goldenrod;
-  font-weight: 800;
-  font-size: 6rem;
+  font-weight: bold;
+  font-size: 7rem;
   line-height: 0.8;
 }
 .main-title {
@@ -79,12 +91,21 @@ export default {
   font-size: 2rem;
 }
 .sub-title {
-  color: #afafaf;
-  font-size: 1.3rem;
+  color: var(--cinza);
+  font-size: 1.2rem;
 }
 .social-media {
-  color: #afafaf;
-  font-size: 1.3rem;
+  display: flex;
+  gap: 2rem;
+}
+.social-media a {
+  background: transparent;
+  color: var(--roxo);
+  border: solid 1px var(--roxo);
+  border-radius: 0.8rem;
+  padding: 0.25rem 0.8rem;
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 /**
