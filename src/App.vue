@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <NavBar></NavBar>
     <v-main>
       <HomePage/>
     </v-main>
@@ -8,14 +9,23 @@
 
 <script>
 import HomePage from './pages/HomePage.vue'
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
     HomePage,
+    NavBar
   },
   data: () => ({
     //
   }),
 }
 </script>
+<style>
+.v-main {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+</style>

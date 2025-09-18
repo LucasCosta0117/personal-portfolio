@@ -2,6 +2,7 @@
   <!-- NavBar Mobile -->
   <v-app-bar
     flat
+    height="100"
     class="dark-bg"
     v-if="isMobile"
   >
