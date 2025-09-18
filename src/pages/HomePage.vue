@@ -18,10 +18,10 @@
           </p>
         </div>
         <div class="social-media">
-          <a :href="urlLinkedin" target="_blank">
+          <a :href="linkedin.url" target="_blank" :title="linkedin.title">
             <span class="mdi mdi-linkedin"></span>
           </a>
-          <a :href="urlGithub" target="_blank">
+          <a :href="github.url" target="_blank" :title="github.title">
             <span class="mdi mdi-github"></span>
           </a>
         </div>
@@ -36,8 +36,14 @@ export default {
   components: {},
   data() {
     return {
-      urlLinkedin: 'https://www.linkedin.com/in/lucas-costa-5a14a8239/',
-      urlGithub: 'https://github.com/LucasCosta0117',
+      linkedin: {
+        title: 'Linkedin',
+        url: 'https://www.linkedin.com/in/lucas-costa-5a14a8239/',
+      },
+      github: {
+        title: 'Github',
+        url: 'https://github.com/LucasCosta0117',
+      }
     }
   },
 }
@@ -105,6 +111,10 @@ export default {
   padding: 0.25rem 0.8rem;
   text-decoration: none;
   font-size: 2rem;
+}
+.social-media a:hover{
+  color: goldenrod;
+  border: solid 1px goldenrod;
 }
 
 /**
