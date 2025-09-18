@@ -45,7 +45,6 @@ export default {
 <style scoped>
 .home-container {
   /* Important Variables */
-  --roxo: #6c23af;
   --cinza: #afafaf;
 
   /* CSS */
@@ -100,8 +99,8 @@ export default {
 }
 .social-media a {
   background: transparent;
-  color: var(--roxo);
-  border: solid 1px var(--roxo);
+  color: var(--cinza);
+  border: solid 1px var(--cinza);
   border-radius: 0.8rem;
   padding: 0.25rem 0.8rem;
   text-decoration: none;
