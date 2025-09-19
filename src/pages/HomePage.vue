@@ -26,14 +26,21 @@
           </a>
         </div>
       </section>
+      <section id="about">
+        <SectionTitle :title="aboutTitle"/>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+import SectionTitle from '@/components/SectionTitle.vue';
+
 export default {
   name: 'HelloWorld',
-  components: {},
+  components: {
+    SectionTitle
+  },
   data() {
     return {
       linkedin: {
@@ -43,7 +50,8 @@ export default {
       github: {
         title: 'Github',
         url: 'https://github.com/LucasCosta0117',
-      }
+      },
+      aboutTitle: 'Sobre'
     }
   },
 }
@@ -108,9 +116,9 @@ export default {
   color: var(--cinza);
   border: solid 1px var(--cinza);
   border-radius: 0.8rem;
-  padding: 0.25rem 0.8rem;
+  padding: 0.2rem 0.6rem;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .social-media a:hover{
   color: goldenrod;
