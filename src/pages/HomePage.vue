@@ -29,17 +29,28 @@
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
       </section>
+      <section id="about">
+        <SectionTitle :title="servicesTitle"/>
+        <ServiceCard
+          v-for="serv in servicesList" :key="serv.title"
+          :title="serv.title"
+          :icon="serv.icon"
+          :description="serv.description"
+        />
+      </section>
     </div>
   </div>
 </template>
 
 <script>
 import SectionTitle from '@/components/SectionTitle.vue';
+import ServiceCard from '@/components/ServiceCard.vue';
 
 export default {
   name: 'HelloWorld',
   components: {
-    SectionTitle
+    SectionTitle,
+    ServiceCard
   },
   data() {
     return {
@@ -51,7 +62,40 @@ export default {
         title: 'Github',
         url: 'https://github.com/LucasCosta0117',
       },
-      aboutTitle: 'Sobre'
+      aboutTitle: 'Sobre',
+      servicesTitle: 'Serviços',
+      servicesList: [
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+        {
+          title: 'Criação de Websites',
+          icon: 'mdi mdi-webpack',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+        },
+      ]
     }
   },
 }
