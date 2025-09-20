@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
 .dark-bg {
-  background-color: #011518;
+  background-color: #070D1B;
   color: #afafaf;
 }
 .navbar-profile-img {

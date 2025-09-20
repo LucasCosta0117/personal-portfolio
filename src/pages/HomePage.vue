@@ -104,6 +104,7 @@ export default {
 .home-container {
   /* Important Variables */
   --cinza: #afafaf;
+  --azul-claro: #0A101E;
 
   /* CSS */
   height: 100%;
@@ -116,11 +117,11 @@ export default {
   pointer-events: none;
   background:
     radial-gradient(
-      ellipse 80% 60% at 50% 0%,
+      ellipse 80% 50% at 50% 0%,
       rgba(120, 180, 255, 0.25),
       transparent 70%
     ),
-    #000000;
+    var(--azul-claro);
   background-repeat: no-repeat;
   background-size: cover;
 }

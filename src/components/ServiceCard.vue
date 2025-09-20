@@ -45,7 +45,7 @@ export default {
   color: var(--cinza);
   font-size: 3rem;
   padding: 0.25rem 1rem;
-  background-color: #000000;
+  background-color: #070D1B;
 }
 .service-card-title {
   font-size: 1.25rem;
