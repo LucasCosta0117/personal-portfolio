@@ -47,15 +47,24 @@ export default {
   font-size: 3rem;
   padding: 0.25rem 1rem;
   background-color:var(--azul-escuro);
+  transition: all 0.5s ease-in;
 }
 .service-card-title {
   font-size: 1.25rem;
   text-align: center;
+  transition: all 0.5s ease-in;
 }
 .service-card-description {
   color: var(--cinza);
   font-size: 0.875rem;
   font-weight: 300;
   text-align: center;
+}
+.service-card-container:hover .service-card-icon {
+  color: gold;
+  border: solid 1px gold;
+}
+.service-card-container:hover .service-card-title {
+  color: gold;
 }
 </style>
