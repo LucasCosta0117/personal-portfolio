@@ -26,21 +26,21 @@ export default {
 <style scoped>
 .service-card-container {
   /* Variables */
-  --cinza-claro: #afafaf30;
-  --cinza: #afafafb2;
+  --cinza-transp: #afafaf30;
+  --cinza: #afafaf;
   --azul: #101624b7;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px var(--cinza-claro);
+  border: solid 1px var(--cinza-transp);
   border-radius: 0.25rem;
   background-color: var(--azul);
   padding: 3rem;
   gap: 1rem;
 }
 .service-card-icon {
-  border: solid 1px var(--cinza-claro);
+  border: solid 1px var(--cinza-transp);
   border-radius: 50%;
   color: var(--cinza);
   font-size: 3rem;
