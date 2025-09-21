@@ -69,4 +69,7 @@ export default {
   color: var(--cinza);
   font-size: 1rem;
 }
+.timeline-card-container:hover .timeline-marker {
+  background-color: gold;
+}
 </style>
