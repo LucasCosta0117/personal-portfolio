@@ -64,7 +64,7 @@ export default {
 }
 .timeline-card-company {
   font-size: 1.25rem;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
 }
 .timeline-card-description {
   color: var(--cinza);
