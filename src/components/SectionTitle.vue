@@ -18,13 +18,15 @@ export default {
 </script>
 <style  scoped>
 .section-title-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2rem 0rem;
 }
 .background-text {
-  position: relative;
-  top: 75px;
+  position: absolute;
+  top: -0.75rem;
   text-align: center;
   text-wrap: nowrap;
   text-transform: uppercase;
