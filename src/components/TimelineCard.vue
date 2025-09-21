@@ -51,6 +51,7 @@ export default {
   border-radius: 50%;
   border: 1px solid var(--cinza-transp);
   background-color: var(--cinza-escuro);
+  transition: all 0.3s ease-in;
 }
 .timeline-card-title {
   font-weight: 400;
