@@ -28,18 +28,35 @@
       </section>
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
-        <div class="education-resume">
-          <div v-for="educ in educationList" :key="educ.title">
-            <TimelineCard
-              :title="educ.title"
-              :dates="educ.dates"
-              :company="educ.company"
-              :description="educ.description"
-            />
+        <div class="resume-info">
+          <div class="education-resume">
+            <div class="resume-info-title">
+              <span class="mdi mdi-school"></span>
+              <h3>{{ educationTitle }}</h3>
+            </div>
+            <div v-for="educ in educationList" :key="educ.title">
+              <TimelineCard
+                :title="educ.title"
+                :dates="educ.dates"
+                :company="educ.company"
+                :description="educ.description"
+              />
+            </div>
           </div>
-        </div>
-        <div class="experience-resume">
-
+          <div class="experience-resume">
+            <div class="resume-info-title">
+              <span class="mdi mdi-badge-account-horizontal-outline"></span>
+              <h3>{{ experienceTitle }}</h3>
+            </div>
+            <div v-for="exp in experienceList" :key="exp.title">
+              <TimelineCard
+                :title="exp.title"
+                :dates="exp.dates"
+                :company="exp.company"
+                :description="exp.description"
+              />
+            </div>
+          </div>
         </div>
       </section>
       <section id="services">
@@ -114,6 +131,7 @@ export default {
           description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
         }
       ],
+      educationTitle: 'Formação',
       educationList: [
         {
           title: 'Desenvolvedor de Software',
@@ -127,7 +145,22 @@ export default {
           company: 'Simova',
           description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
         }
-      ]
+      ],
+      experienceTitle: 'Experiência',
+      experienceList: [
+        {
+          title: 'Desenvolvedor de Software',
+          dates: { start: '2023', end: 'Atual' },
+          company: 'Simova',
+          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+        },
+        {
+          title: 'Estágio Desenv. Software',
+          dates: { start: '2021', end: '2023' },
+          company: 'Simova',
+          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+        }
+      ],
     }
   },
 }
@@ -136,6 +169,7 @@ export default {
 .home-container {
   /* Important Variables */
   --cinza: #afafaf;
+  --cinza-escuro: #4e4e4e;
   --azul-claro: #0A101E;
 
   /* CSS */
@@ -200,6 +234,25 @@ export default {
 .social-media a:hover{
   color: goldenrod;
   border: solid 1px goldenrod;
+}
+.resume-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.resume-info-title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.resume-info-title span {
+  color: var(--cinza-escuro);
+  font-size: 3rem;
+}
+.resume-info-title h3 {
+  font-weight: 400;
+  font-size: 2rem;
 }
 .section-service-cards {
   display: flex;
