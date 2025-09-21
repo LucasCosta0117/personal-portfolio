@@ -28,6 +28,18 @@
       </section>
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
+        <div class="presentation">
+          <div class="presentation-profile-img"></div>
+          <div class="presentation-text">
+            <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
+            <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
+            <p class="presentation-text-desc"> {{ aboutPresentation }}</p>
+          </div>
+          <img
+            width="100%"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br"
+          />
+        </div>
         <div class="resume-info">
           <div class="education-resume">
             <div class="resume-info-title">
@@ -98,6 +110,12 @@ export default {
         url: 'https://github.com/LucasCosta0117',
       },
       aboutTitle: 'Sobre',
+      aboutGreet: 'Olá, satisfação tê-lo aqui!',
+      aboutPosition: 'Desenvolvedor de Software',
+      aboutPresentation: 'Sou um Desenvolvedor de Software Full Stack com mais de 3 anos de experiência.'
+        + 'Entrego código limpo, arquiteturas robustas e interfaces responsivas.'
+        + 'Minhas habilidades abragem websites profissionais, soluções SaaS, APIs seguras e integração com bancos de dados diversos.'
+        + 'Meu objetivo é entregar softwares confiáveis, eficientes e de fácil usabilidade.',
       servicesTitle: 'Serviços',
       servicesList: [
         {
@@ -234,6 +252,40 @@ export default {
 .social-media a:hover{
   color: goldenrod;
   border: solid 1px goldenrod;
+}
+.presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.presentation-profile-img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--cinza-escuro);
+  background-image: url("@/assets/profile_3x4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.presentation-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.presentation-text-greet {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.presentation-text-position {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: gold;
+}
+.presentation-text-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--cinza);
 }
 .resume-info {
   display: flex;
