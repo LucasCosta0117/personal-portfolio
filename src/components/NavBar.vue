@@ -56,6 +56,7 @@ export default {
       menuItens: [
         { text: 'Início', id: 'home'},
         { text: 'Sobre', id: 'about'},
+        { text: 'Serviços', id: 'services'},
         { text: 'Projetos', id: 'projects'},
         { text: 'Contato', id: 'contact'}
       ]

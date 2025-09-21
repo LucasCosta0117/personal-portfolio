@@ -29,14 +29,17 @@
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
       </section>
-      <section id="about">
+      <section id="services">
         <SectionTitle :title="servicesTitle"/>
-        <ServiceCard
-          v-for="serv in servicesList" :key="serv.title"
-          :title="serv.title"
-          :icon="serv.icon"
-          :description="serv.description"
-        />
+        <div class="section-service-cards">
+          <div v-for="serv in servicesList" :key="serv.title">
+            <ServiceCard
+              :title="serv.title"
+              :icon="serv.icon"
+              :description="serv.description"
+            />
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -67,33 +70,33 @@ export default {
       servicesList: [
         {
           title: 'Criação de Websites',
-          icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          icon: 'mdi mdi-monitor-cellphone',
+          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo.'
         },
         {
-          title: 'Criação de Websites',
-          icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          title: 'Integração de APIs',
+          icon: 'mdi mdi-lan-connect',
+          description: 'Conexão de sistemas através de APIs RESTful e integrações seguras entre diferentes plataformas e ferramentas.'
         },
         {
-          title: 'Criação de Websites',
-          icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          title: 'Banco de Dados',
+          icon: 'mdi mdi-database-arrow-left',
+          description: 'Modelagem, implementação e otimização de bancos de dados relacionais e não-relacionais.'
         },
         {
-          title: 'Criação de Websites',
+          title: 'Desenvolvimento Full Stack',
           icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          description: 'Criação de aplicações modernas, seguras e escaláveis, unindo back-end robusto com front-end responsivo e otimizado.'
         },
         {
-          title: 'Criação de Websites',
-          icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          title: 'DevOps & Deploy',
+          icon: 'mdi mdi-console',
+          description: 'Conhecimento de processos de build, testes e deploy, com experiência em Docker, CI/CD e serviços em nuvem.'
         },
         {
-          title: 'Criação de Websites',
-          icon: 'mdi mdi-webpack',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo'
+          title: 'Soluções SaaS',
+          icon: 'mdi mdi-hexagon-multiple',
+          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
         },
       ]
     }
@@ -169,7 +172,12 @@ export default {
   color: goldenrod;
   border: solid 1px goldenrod;
 }
-
+.section-service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0rem;
+}
 /**
  * Pequenos dispositivos
  * Vuetify 'sm' Break Point
