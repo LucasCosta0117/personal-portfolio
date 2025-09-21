@@ -28,6 +28,19 @@
       </section>
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
+        <div class="education-resume">
+          <div v-for="educ in educationList" :key="educ.title">
+            <TimelineCard
+              :title="educ.title"
+              :dates="educ.dates"
+              :company="educ.company"
+              :description="educ.description"
+            />
+          </div>
+        </div>
+        <div class="experience-resume">
+
+        </div>
       </section>
       <section id="services">
         <SectionTitle :title="servicesTitle"/>
@@ -48,12 +61,14 @@
 <script>
 import SectionTitle from '@/components/SectionTitle.vue';
 import ServiceCard from '@/components/ServiceCard.vue';
+import TimelineCard from '@/components/TimelineCard.vue';
 
 export default {
   name: 'HelloWorld',
   components: {
     SectionTitle,
-    ServiceCard
+    ServiceCard,
+    TimelineCard
   },
   data() {
     return {
@@ -97,7 +112,21 @@ export default {
           title: 'Soluções SaaS',
           icon: 'mdi mdi-hexagon-multiple',
           description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+        }
+      ],
+      educationList: [
+        {
+          title: 'Desenvolvedor de Software',
+          dates: { start: '2023', end: 'Atual' },
+          company: 'Simova',
+          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
         },
+        {
+          title: 'Estágio Desenv. Software',
+          dates: { start: '2021', end: '2023' },
+          company: 'Simova',
+          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+        }
       ]
     }
   },
@@ -176,7 +205,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 2rem 0rem;
 }
 /**
  * Pequenos dispositivos
