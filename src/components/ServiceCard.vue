@@ -28,14 +28,15 @@ export default {
   /* Variables */
   --cinza-transp: #afafaf30;
   --cinza: #afafaf;
-  --azul: #101624b7;
+  --azul-claro: #101624b7;
+  --azul-escuro: #070D1B;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 1px var(--cinza-transp);
   border-radius: 0.25rem;
-  background-color: var(--azul);
+  background-color: var(--azul-claro);
   padding: 3rem;
   gap: 1rem;
 }
@@ -45,7 +46,7 @@ export default {
   color: var(--cinza);
   font-size: 3rem;
   padding: 0.25rem 1rem;
-  background-color: #070D1B;
+  background-color:var(--azul-escuro);
 }
 .service-card-title {
   font-size: 1.25rem;
