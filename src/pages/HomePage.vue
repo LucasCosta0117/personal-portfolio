@@ -37,7 +37,7 @@
           </div>
           <img
             width="100%"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=4&theme=vision-friendly-dark&locale=pt-br"
           />
           <BtnDownloadFile/>
         </div>
@@ -116,9 +116,9 @@ export default {
       aboutGreet: 'Olá, satisfação tê-lo aqui!',
       aboutPosition: 'Desenvolvedor de Software',
       aboutPresentation: 'Sou um Desenvolvedor de Software Full Stack com mais de 3 anos de experiência.'
-        + 'Entrego código limpo, arquiteturas robustas e interfaces responsivas.'
-        + 'Minhas habilidades abragem websites profissionais, soluções SaaS, APIs seguras e integração com bancos de dados diversos.'
-        + 'Meu objetivo é entregar softwares confiáveis, eficientes e de fácil usabilidade.',
+        + ' Entrego código limpo, arquiteturas robustas e interfaces responsivas.'
+        + ' Minhas habilidades abragem websites profissionais, soluções SaaS, APIs seguras e integração com bancos de dados diversos.'
+        + ' Meu objetivo é entregar softwares confiáveis, eficientes e de fácil usabilidade.',
       servicesTitle: 'Serviços',
       servicesList: [
         {
@@ -155,31 +155,32 @@ export default {
       educationTitle: 'Formação',
       educationList: [
         {
-          title: 'Desenvolvedor de Software',
-          dates: { start: '2023', end: 'Atual' },
-          company: 'Simova',
-          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+          title: 'Análise e Desenvolvimento de Sistemas',
+          dates: { start: '2022', end: '2025' },
+          company: 'UNIFACS',
+          description: 'Curso Superior de Tecnologia em Análise de Sistemas de Computação pela Universidade Salvador.'
         },
         {
-          title: 'Estágio Desenv. Software',
-          dates: { start: '2021', end: '2023' },
-          company: 'Simova',
-          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+          title: 'Engenharia Civil',
+          dates: { start: '2014', end: '2025' },
+          company: 'UFBA',
+          description: 'Bacharelado em Engenharia Civil pela Universidade Federal da Bahia.'
         }
       ],
       experienceTitle: 'Experiência',
       experienceList: [
         {
           title: 'Desenvolvedor de Software',
-          dates: { start: '2023', end: 'Atual' },
+          dates: { start: '2022', end: 'Atual' },
           company: 'Simova',
-          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+          description: 'Desenvolvedor Full Stack responsável pela implementação de novas features, suporte e correção de bugs em uma aplicação robusta de tipo SaaS.'+
+          ' Atuando principalmente com as linguagens PHP e VueJs para garantir a melhoria contínua do produto.'
         },
         {
-          title: 'Estágio Desenv. Software',
-          dates: { start: '2021', end: '2023' },
-          company: 'Simova',
-          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
+          title: 'Sócio e Diretor Comercial',
+          dates: { start: '2021', end: '2022' },
+          company: 'Moderna Manutenção Pedrial',
+          description: 'Responsável pela gestão das operações comerciais e participação ativa na coordenação e acompanhamento técnico dos projetos da empresa.'
         }
       ],
     }
