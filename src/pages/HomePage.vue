@@ -39,6 +39,7 @@
             width="100%"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br"
           />
+          <BtnDownloadFile/>
         </div>
         <div class="resume-info">
           <div class="education-resume">
@@ -91,13 +92,15 @@
 import SectionTitle from '@/components/SectionTitle.vue';
 import ServiceCard from '@/components/ServiceCard.vue';
 import TimelineCard from '@/components/TimelineCard.vue';
+import BtnDownloadFile from '@/components/BtnDownloadFile.vue';
 
 export default {
   name: 'HelloWorld',
   components: {
     SectionTitle,
     ServiceCard,
-    TimelineCard
+    TimelineCard,
+    BtnDownloadFile
   },
   data() {
     return {
