@@ -18,7 +18,9 @@
   >
     <v-list>
       <v-list-item
-        v-for="item in menuItens" :key="item.id"
+        v-for="item in menuItens" 
+        :key="item.id"
+        @click="scrollToSection(item.id)"
       >
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
@@ -36,7 +38,9 @@
       </v-list-item>
       <v-divider></v-divider>
       <v-list-item
-        v-for="item in menuItens" :key="item.id"
+        v-for="item in menuItens" 
+        :key="item.id"
+        @click="scrollToSection(item.id)"
       >
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
@@ -67,7 +71,15 @@ export default {
       return this.windowWidth <= 960;
     },
   },
-  methods: {}
+  methods: {
+    scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+        this.drawer = false;
+      }
+    }
+  }
 }
 </script>
 
