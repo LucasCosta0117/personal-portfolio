@@ -21,6 +21,7 @@
         v-for="item in menuItens" 
         :key="item.id"
         @click="scrollToSection(item.id)"
+        :class="{ activeSection: currentSection == item.id }"
       >
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
@@ -41,6 +42,7 @@
         v-for="item in menuItens" 
         :key="item.id"
         @click="scrollToSection(item.id)"
+        :class="{ activeSection: currentSection == item.id }"
       >
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
@@ -63,13 +65,34 @@ export default {
         { text: 'Serviços', id: 'services'},
         { text: 'Projetos', id: 'projects'},
         { text: 'Contato', id: 'contact'}
-      ]
+      ],
+      currentSection: 'home'
     }
   },
   computed: {
     isMobile() {
       return this.windowWidth <= 960;
     },
+  },
+  mounted() {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.currentSection = entry.target.id;
+        }
+      });
+    }, options);
+
+    this.menuItens.forEach(item => {
+      const section = document.getElementById(item.id);
+      if (section) observer.observe(section);
+    });
   },
   methods: {
     scrollToSection(id) {
@@ -96,5 +119,8 @@ export default {
   background-image: url("@/assets/profile_3x4.jpg");
   background-position: center;
   background-size: cover;
+}
+.activeSection {
+  color: gold;
 }
 </style>
