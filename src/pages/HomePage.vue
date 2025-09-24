@@ -84,6 +84,18 @@
           </div>
         </div>
       </section>
+      <section id="projects">
+        <SectionTitle :title="projectsTitle"/>
+        <div class="projects-cards">
+          <div v-for="proj in projectsList" :key="proj.name">
+            <ProjectCard
+              :imgPath="proj.imgPath"
+              :name="proj.name"
+              :type="proj.type"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -93,6 +105,7 @@ import SectionTitle from '@/components/SectionTitle.vue';
 import ServiceCard from '@/components/ServiceCard.vue';
 import TimelineCard from '@/components/TimelineCard.vue';
 import BtnDownloadFile from '@/components/BtnDownloadFile.vue';
+import ProjectCard from '@/components/ProjectCard.vue';
 
 export default {
   name: 'HelloWorld',
@@ -100,7 +113,8 @@ export default {
     SectionTitle,
     ServiceCard,
     TimelineCard,
-    BtnDownloadFile
+    BtnDownloadFile,
+    ProjectCard
   },
   data() {
     return {
@@ -183,6 +197,12 @@ export default {
           description: 'Responsável pela gestão das operações comerciais e participação ativa na coordenação e acompanhamento técnico dos projetos da empresa.'
         }
       ],
+      projectsTitle: 'Projetos',
+      projectsList: [
+        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' },
+        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' },
+        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' }
+      ]
     }
   },
 }
@@ -311,6 +331,11 @@ export default {
   font-size: 2rem;
 }
 .section-service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.projects-cards {
   display: flex;
   flex-direction: column;
   gap: 2rem;
