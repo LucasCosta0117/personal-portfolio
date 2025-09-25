@@ -92,9 +92,14 @@
               :imgPath="proj.imgPath"
               :name="proj.name"
               :type="proj.type"
+              @click="openModal(proj)"
             />
           </div>
         </div>
+        <ProjectModal
+          v-model:showModal="showModal"
+          :project="selectedProject"
+        />
       </section>
     </div>
   </div>
@@ -106,6 +111,7 @@ import ServiceCard from '@/components/ServiceCard.vue';
 import TimelineCard from '@/components/TimelineCard.vue';
 import BtnDownloadFile from '@/components/BtnDownloadFile.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
+import ProjectModal from '@/components/ProjectModal.vue';
 
 export default {
   name: 'HelloWorld',
@@ -114,7 +120,8 @@ export default {
     ServiceCard,
     TimelineCard,
     BtnDownloadFile,
-    ProjectCard
+    ProjectCard,
+    ProjectModal
   },
   data() {
     return {
@@ -199,12 +206,44 @@ export default {
       ],
       projectsTitle: 'Projetos',
       projectsList: [
-        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' },
-        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' },
-        { imgPath: require('@/assets/images/project-b2.png'), name: 'B2 Engenharia', type: 'Site Institucional' }
-      ]
+        { 
+          imgPath: require('@/assets/images/project-b2.png'), 
+          name: 'B2 Engenharia', 
+          type: 'Site Institucional',
+          urlSite: 'https://engenhariab2.com/',
+          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
+          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
+            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
+        },
+        { 
+          imgPath: require('@/assets/images/project-b2.png'), 
+          name: 'B2 Engenharia', 
+          type: 'Site Institucional',
+          urlSite: 'https://engenhariab2.com/',
+          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
+          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
+            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
+        },
+        { 
+          imgPath: require('@/assets/images/project-b2.png'), 
+          name: 'B2 Engenharia', 
+          type: 'Site Institucional',
+          urlSite: 'https://engenhariab2.com/',
+          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
+          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
+            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
+        }
+      ],
+      showModal: false,
+      selectedProject: null
     }
   },
+  methods: {
+    openModal(proj) {
+      this.showModal = true;
+      this.selectedProject = proj;
+    }
+  }
 }
 </script>
 <style scoped>
