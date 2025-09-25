@@ -101,6 +101,34 @@
           :project="selectedProject"
         />
       </section>
+      <section id="contact">
+        <SectionTitle :title="contactTitle"/>
+        <div class="contact-info-container">
+          <h3 class="contact-info-title">{{ infoTitle }}</h3>
+          <p class="contact-info-description">{{ infoDescription }}</p>
+          <div class="contact-info-item">
+            <span class="mdi mdi-email-check-outline contact-info-icon"></span>
+            <div>
+              <h4>{{ infoEmail.layer }}</h4>
+              <p>{{ infoEmail.value }}</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="mdi mdi-phone-dial contact-info-icon"></span>
+            <div class="contact-info-phone-text">
+              <h4>{{ infoPhone.layer }}</h4>
+              <p>{{ infoPhone.value }}</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="mdi mdi-map-marker contact-info-icon"></span>
+            <div class="contact-info-address-text">
+              <h4>{{ infoAddress.layer }}</h4>
+              <p>{{ infoAddress.value }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -207,7 +235,7 @@ export default {
       projectsTitle: 'Projetos',
       projectsList: [
         { 
-          imgPath: require('@/assets/images/project-b2.png'), 
+          imgPath: require('@/assets/images/project-b2.png'),
           name: 'B2 Engenharia', 
           type: 'Site Institucional',
           urlSite: 'https://engenhariab2.com/',
@@ -235,7 +263,14 @@ export default {
         }
       ],
       showModal: false,
-      selectedProject: null
+      selectedProject: null,
+      contactTitle: 'Contato',
+      infoTitle: 'Informações Para Contato',
+      infoDescription: 'Ficou interessado? Gostaria de desenvolver seu projeto comigo? '+
+        'É fácil, basta mandar uma mensagem para um dos canais abaixo, será um prazer falar com você!',
+      infoEmail: { layer: 'Email', value: 'lucasscosta.dev@gmail.com' },
+      infoPhone: { layer: 'Telefone', value: '+55 75 991896258' },
+      infoAddress: { layer: 'Endereço', value: 'São Paulo, SP - Brasil' }
     }
   },
   methods: {
@@ -378,6 +413,38 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-info-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.contact-info-description {
+  font-size: 1rem;
+  color: var(--cinza);
+}
+.contact-info-item {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+.contact-info-item h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.contact-info-item p {
+  color: var(--cinza);
+}
+.contact-info-icon {
+  color: var(--cinza);
+  border: solid 1px var(--cinza);
+  border-radius: 0.8rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
 }
 /**
  * Pequenos dispositivos
