@@ -6,12 +6,15 @@
   </a>
 </template>
 <script>
+import cvFile_pt from '@/assets/files/LUCAS_DA_SILVA_COSTA-DESENVOLVEDOR-CV_PT.pdf';
+// import cvFile_en from '@/assets/files/LUCAS_DA_SILVA_COSTA-DESENVOLVEDOR-CV_EN.pdf';
+
 export default {
   name: 'BtnDownloadFile',
   data() {
     return {
       btnLayer: 'Baixar Currículo',
-      pathFile: '',
+      pathFile: cvFile_pt
     }
   }
 }
