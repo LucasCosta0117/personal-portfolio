@@ -1,6 +1,7 @@
 <template>
   <!-- NavBar Mobile -->
   <v-app-bar
+    app
     flat
     height="80"
     class="dark-bg"
