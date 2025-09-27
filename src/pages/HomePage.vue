@@ -103,28 +103,33 @@
       </section>
       <section id="contact">
         <SectionTitle :title="contactTitle"/>
-        <div class="contact-info-container">
-          <h3 class="contact-info-title">{{ infoTitle }}</h3>
-          <p class="contact-info-description">{{ infoDescription }}</p>
-          <div class="contact-info-item">
-            <span class="mdi mdi-email-check-outline contact-info-icon"></span>
-            <div>
-              <h4>{{ infoEmail.layer }}</h4>
-              <p>{{ infoEmail.value }}</p>
-            </div>
+        <div class="contact-container">
+          <div class="contact-form">
+            <ContactForm />
           </div>
-          <div class="contact-info-item">
-            <span class="mdi mdi-phone-dial contact-info-icon"></span>
-            <div class="contact-info-phone-text">
-              <h4>{{ infoPhone.layer }}</h4>
-              <p>{{ infoPhone.value }}</p>
+          <div class="contact-info-container">
+            <h3 class="contact-info-title">{{ infoTitle }}</h3>
+            <p class="contact-info-description">{{ infoDescription }}</p>
+            <div class="contact-info-item">
+              <span class="mdi mdi-email-check-outline contact-info-icon"></span>
+              <div>
+                <h4>{{ infoEmail.layer }}</h4>
+                <p>{{ infoEmail.value }}</p>
+              </div>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="mdi mdi-map-marker contact-info-icon"></span>
-            <div class="contact-info-address-text">
-              <h4>{{ infoAddress.layer }}</h4>
-              <p>{{ infoAddress.value }}</p>
+            <div class="contact-info-item">
+              <span class="mdi mdi-phone-dial contact-info-icon"></span>
+              <div class="contact-info-phone-text">
+                <h4>{{ infoPhone.layer }}</h4>
+                <p>{{ infoPhone.value }}</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="mdi mdi-map-marker contact-info-icon"></span>
+              <div class="contact-info-address-text">
+                <h4>{{ infoAddress.layer }}</h4>
+                <p>{{ infoAddress.value }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -140,6 +145,7 @@ import TimelineCard from '@/components/TimelineCard.vue';
 import BtnDownloadFile from '@/components/BtnDownloadFile.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectModal from '@/components/ProjectModal.vue';
+import ContactForm from '@/components/ContactForm.vue';
 
 export default {
   name: 'HelloWorld',
@@ -149,7 +155,8 @@ export default {
     TimelineCard,
     BtnDownloadFile,
     ProjectCard,
-    ProjectModal
+    ProjectModal,
+    ContactForm
   },
   data() {
     return {
@@ -413,6 +420,11 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 .contact-info-container {
   display: flex;
