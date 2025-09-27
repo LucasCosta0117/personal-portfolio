@@ -34,7 +34,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20rem;
+    height: inherit;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

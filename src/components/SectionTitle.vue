@@ -56,10 +56,8 @@ export default {
  * Vuetify 'sm' Break Point
  */
 @media (min-width: 600px) {
-  .background-text {
-    top: 6.25rem;
-    font-size: 6rem;
-    letter-spacing: 0.5rem;
+  .section-title-container {
+    margin: 4rem 0rem;
   }
 }
 </style>

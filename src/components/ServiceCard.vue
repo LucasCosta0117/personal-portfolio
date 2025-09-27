@@ -33,12 +33,15 @@ export default {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border: solid 1px var(--cinza-transp);
   border-radius: 0.25rem;
   background-color: var(--azul-claro);
   padding: 3rem;
   gap: 1rem;
+  width: 100%;
+  height: inherit;
 }
 .service-card-icon {
   border: solid 1px var(--cinza-transp);

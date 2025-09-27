@@ -4,7 +4,7 @@
     <div class="bg-layer" aria-hidden="true"></div>
 
     <!-- Main Content -->
-    <div class="home-content">
+    <div class="main-content">
       <section id="home">
         <div class="main-title">
           <p>
@@ -36,7 +36,7 @@
             <p class="presentation-text-desc"> {{ aboutPresentation }}</p>
           </div>
           <img
-            width="100%"
+            class="langs-stats"
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=4&theme=vision-friendly-dark&locale=pt-br"
           />
           <BtnDownloadFile/>
@@ -75,7 +75,7 @@
       <section id="services">
         <SectionTitle :title="servicesTitle"/>
         <div class="section-service-cards">
-          <div v-for="serv in servicesList" :key="serv.title">
+          <div v-for="serv in servicesList" :key="serv.title" class="service-card-item">
             <ServiceCard
               :title="serv.title"
               :icon="serv.icon"
@@ -87,7 +87,7 @@
       <section id="projects">
         <SectionTitle :title="projectsTitle"/>
         <div class="projects-cards">
-          <div v-for="proj in projectsList" :key="proj.name">
+          <div v-for="proj in projectsList" :key="proj.name" class="project-card-item">
             <ProjectCard
               :imgPath="proj.imgPath"
               :name="proj.name"
@@ -314,7 +314,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.home-content {
+.main-content {
   position: relative;
   z-index: 1;
   color: white;
@@ -392,6 +392,9 @@ export default {
   font-weight: 300;
   color: var(--cinza);
 }
+.langs-stats {
+  width: 100%;
+}
 .resume-info {
   display: flex;
   flex-direction: column;
@@ -420,6 +423,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.project-card-item {
+  height: 20rem;
 }
 .contact-container {
   display: flex;
@@ -463,7 +469,30 @@ export default {
  * Vuetify 'sm' Break Point
  */
 @media (min-width: 600px) {
-
+  .main-content {
+    padding: 0 2rem;
+  }
+  .presentation-profile-img {
+    height: 36rem;
+  }
+  .langs-stats {
+    width: 23rem;
+  }
+  .section-service-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .service-card-item {
+    width: 47.5%;
+    height: 22rem;
+  }
+  .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .project-card-item {
+    width: 47.5%;
+  }
 }
 
 /**
