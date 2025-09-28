@@ -148,6 +148,7 @@
           </div>
         </div>
       </section>
+      <FooterPage :urlGithub="github.url"/>
     </div>
   </div>
 </template>
@@ -160,6 +161,7 @@ import BtnDownloadFile from '@/components/BtnDownloadFile.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectModal from '@/components/ProjectModal.vue';
 import ContactForm from '@/components/ContactForm.vue';
+import FooterPage from '@/components/FooterPage.vue';
 
 export default {
   name: 'HelloWorld',
@@ -170,7 +172,8 @@ export default {
     BtnDownloadFile,
     ProjectCard,
     ProjectModal,
-    ContactForm
+    ContactForm,
+    FooterPage
   },
   data() {
     return {
