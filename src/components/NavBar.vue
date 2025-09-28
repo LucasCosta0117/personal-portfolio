@@ -44,6 +44,7 @@
         :key="item.id"
         @click="scrollToSection(item.id)"
         :class="{ activeSection: currentSection == item.id }"
+        class="ml-4 mt-2"
       >
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
@@ -113,9 +114,9 @@ export default {
   color: #afafaf;
 }
 .navbar-profile-img {
-  height: 48px;
-  width: 48px;
-  border-radius: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
   border: 1px solid #afafafad;
   background-image: url("@/assets/profile_3x4.jpg");
   background-position: center;
@@ -123,5 +124,20 @@ export default {
 }
 .activeSection {
   color: gold;
+}
+
+/**
+ * Dispositivos médios/grandes
+ * Vuetify 'md' Break Point
+ */
+@media (min-width: 960px) {
+  .navbar-profile-img {
+    height: 10rem;
+    width: 10rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border: 3px solid #afafafad;
+  }
 }
 </style>
