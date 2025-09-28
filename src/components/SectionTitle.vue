@@ -60,4 +60,16 @@ export default {
     margin: 4rem 0rem;
   }
 }
+
+/**
+ * Dispositivos médios/grandes
+ * Vuetify 'md' Break Point
+ */
+@media (min-width: 960px) {
+  .background-text {
+    top: -2rem;
+    font-size: 5.5rem;
+    letter-spacing: 0.5rem;
+  }
+}
 </style>

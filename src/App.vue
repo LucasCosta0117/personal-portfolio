@@ -23,4 +23,9 @@ export default {
 }
 </script>
 <style>
+.v-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

@@ -30,16 +30,18 @@
         <SectionTitle :title="aboutTitle"/>
         <div class="presentation">
           <div class="presentation-profile-img"></div>
-          <div class="presentation-text">
-            <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
-            <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
-            <p class="presentation-text-desc"> {{ aboutPresentation }}</p>
+          <div class="presentation-info">
+            <div class="presentation-text">
+              <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
+              <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
+              <p class="presentation-text-desc"> {{ aboutPresentation }}</p>
+            </div>
+            <img
+              class="langs-stats"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=4&theme=vision-friendly-dark&locale=pt-br"
+            />
+            <BtnDownloadFile/>
           </div>
-          <img
-            class="langs-stats"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=4&theme=vision-friendly-dark&locale=pt-br"
-          />
-          <BtnDownloadFile/>
         </div>
         <div class="resume-info">
           <div class="education-resume">
@@ -121,7 +123,18 @@
               <span class="mdi mdi-phone-dial contact-info-icon"></span>
               <div class="contact-info-phone-text">
                 <h4>{{ infoPhone.layer }}</h4>
-                <p>{{ infoPhone.value }}</p>
+                <a :href="infoPhone.whatsUrl" target="_blank" :title="infoPhone.layer">
+                  <p>{{ infoPhone.value }}</p>
+                </a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="mdi mdi-linkedin contact-info-icon"></span>
+              <div class="contact-info-address-text">
+                <h4>{{ linkedin.title }}</h4>
+                <a :href="linkedin.url" target="_blank" :title="linkedin.title">
+                  <p>{{ linkedin.tinyUrl }}</p>
+                </a>
               </div>
             </div>
             <div class="contact-info-item">
@@ -163,6 +176,7 @@ export default {
       linkedin: {
         title: 'Linkedin',
         url: 'https://www.linkedin.com/in/lucas-costa-5a14a8239/',
+        tinyUrl: 'linkedin.com/in/lucas-costa-5a14a8239'
       },
       github: {
         title: 'Github',
@@ -273,10 +287,10 @@ export default {
       selectedProject: null,
       contactTitle: 'Contato',
       infoTitle: 'Informações Para Contato',
-      infoDescription: 'Ficou interessado? Gostaria de desenvolver seu projeto comigo? '+
-        'É fácil, basta mandar uma mensagem para um dos canais abaixo, será um prazer falar com você!',
+      infoDescription: 'Ficou interessado? Deseja me fazer uma proposta? Ou gostaria de desenvolver seu projeto comigo? '+
+        'É fácil, basta mandar uma mensagem através do formulário, ou, para um dos canais abaixo, será um prazer falar com você!',
       infoEmail: { layer: 'Email', value: 'lucasscosta.dev@gmail.com' },
-      infoPhone: { layer: 'Telefone', value: '+55 75 991896258' },
+      infoPhone: { layer: 'Telefone / Whatsapp', value: '+55 75 991896258', whatsUrl: 'http://web.whatsapp.com/send/?phone=5575991896258' },
       infoAddress: { layer: 'Endereço', value: 'São Paulo, SP - Brasil' }
     }
   },
@@ -373,6 +387,12 @@ export default {
   background-position: center;
   background-size: cover;
 }
+.presentation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
 .presentation-text {
   display: flex;
   flex-direction: column;
@@ -457,6 +477,14 @@ export default {
 .contact-info-item p {
   color: var(--cinza);
 }
+.contact-info-item a {
+  text-decoration: none;
+  cursor: pointer;
+  color: goldenrod;
+}
+.contact-info-item a:hover p {
+  color: goldenrod;
+}
 .contact-info-icon {
   color: var(--cinza);
   border: solid 1px var(--cinza);
@@ -500,6 +528,51 @@ export default {
  * Vuetify 'md' Break Point
  */
 @media (min-width: 960px) {
-
+  .bg-layer {
+    background:
+      radial-gradient(
+        ellipse 70% 65% at 60% 0%,
+        rgba(120, 180, 255, 0.25),
+        transparent 70%
+      ),
+      var(--azul-claro);
+  }
+  .main-content {
+    max-width: 1100px;
+  }
+  .presentation {
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+  .presentation-profile-img {
+    width: 150rem;
+    height: 33rem;
+  }
+  .resume-info {
+    flex-direction: row;
+  }
+  .education-resume {
+    width: 50%;
+  }
+  .experience-resume {
+    width: 50%;
+  }
+  .service-card-item {
+    width: 31%;
+    height: 20rem;
+  }
+  .project-card-item {
+    width: 31%;
+  }
+  .contact-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .contact-form {
+    width: 60%;
+  }
+  .contact-info-container {
+    width: 40%;
+  }
 }
 </style>
