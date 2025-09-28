@@ -107,6 +107,7 @@
         <SectionTitle :title="contactTitle"/>
         <div class="contact-container">
           <div class="contact-form">
+            <h3 class="contact-info-title ml-4 mb-1">{{ formTitle }}</h3>
             <ContactForm />
           </div>
           <div class="contact-info-container">
@@ -286,6 +287,7 @@ export default {
       showModal: false,
       selectedProject: null,
       contactTitle: 'Contato',
+      formTitle: 'Envie sua mensagem',
       infoTitle: 'Informações Para Contato',
       infoDescription: 'Ficou interessado? Deseja me fazer uma proposta? Ou gostaria de desenvolver seu projeto comigo? '+
         'É fácil, basta mandar uma mensagem através do formulário, ou, para um dos canais abaixo, será um prazer falar com você!',
@@ -450,7 +452,7 @@ export default {
 .contact-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
 }
 .contact-info-container {
   display: flex;
