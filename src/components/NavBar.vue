@@ -118,7 +118,7 @@ export default {
   width: 3rem;
   border-radius: 50%;
   border: 1px solid #afafafad;
-  background-image: url("@/assets/profile_3x4.jpg");
+  background-image: url("@/assets/images/profile_1.webp");
   background-position: center;
   background-size: cover;
 }

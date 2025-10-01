@@ -260,7 +260,7 @@ export default {
       projectsTitle: 'Projetos',
       projectsList: [
         { 
-          imgPath: require('@/assets/images/project-b2.png'),
+          imgPath: require('@/assets/images/project-b2.webp'),
           name: 'B2 Engenharia', 
           type: 'Site Institucional',
           urlSite: 'https://engenhariab2.com/',
@@ -269,22 +269,22 @@ export default {
             'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
         },
         { 
-          imgPath: require('@/assets/images/project-b2.png'), 
-          name: 'B2 Engenharia', 
-          type: 'Site Institucional',
-          urlSite: 'https://engenhariab2.com/',
-          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
-          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
-            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
+          imgPath: require('@/assets/images/project-salus.webp'),
+          name: 'Salus Ebook', 
+          type: 'Landing Page',
+          urlSite: 'https://www.salusbooks.com.br/',
+          urlGithub: 'https://github.com/LucasCosta0117/landing-page-enxaqueca',
+          description: 'Landing Page criada para Salus Book para venda do livro digital sobre enxaqueca . '+
+            'Design próprio e executado em VueJs 3.'
         },
         { 
-          imgPath: require('@/assets/images/project-b2.png'), 
-          name: 'B2 Engenharia', 
-          type: 'Site Institucional',
-          urlSite: 'https://engenhariab2.com/',
-          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
-          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
-            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
+          imgPath: require('@/assets/images/project-fin.webp'), 
+          name: 'Simulador de Financiamento', 
+          type: 'Aplicação Web',
+          urlSite: 'https://lucascosta0117.github.io/Simulador-Financiamento/',
+          urlGithub: 'https://github.com/LucasCosta0117/Simulador-Financiamento',
+          description: 'Aplicação que permite realizar uma simulação de financiamento do tipo SAC (Sistema de Amortização Constante), '+
+          'com e sem período de carência. Design próprio e executado em HTML + CSS + JS.'
         }
       ],
       showModal: false,
@@ -388,8 +388,8 @@ export default {
   height: 20rem;
   border-radius: 0.5rem;
   border: 1px solid var(--cinza-escuro);
-  background-image: url("@/assets/profile_3x4.jpg");
-  background-position: center;
+  background-image: url("@/assets/images/profile_2.webp");
+  background-position: top;
   background-size: cover;
 }
 .presentation-info {

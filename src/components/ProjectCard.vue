@@ -63,7 +63,8 @@ export default {
   }
   .project-card-hover h3 {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
+    text-align: center;
   }
   .project-card-hover p {
     color: var(--cinza);
