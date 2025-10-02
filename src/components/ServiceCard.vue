@@ -8,15 +8,27 @@
   </div>
 </template>
 <script>
+/**
+ * Componente, do tipo 'Card', para descrever um serviço oferecido.
+ */
 export default {
   name: 'ServiceCard',
   props: {
+    /**
+     * Título/Nome do serviço.
+     */
     title: {
       type: String
     },
+    /**
+     * Classe Webfont disponibilizada em Material Design Icons.
+     */
     icon: {
       type: String
     },
+    /**
+     * Descrição para o serviço.
+     */
     description: {
       type: String
     }

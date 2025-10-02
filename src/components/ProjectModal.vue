@@ -41,20 +41,33 @@
   </v-dialog>
 </template>
 <script>
+/**
+ * Modal/Dialog aberto ao clickar sobre um card de projeto (ProjectCard.vue),
+ * este irá apresentar em maiores detalhes as informações sobre o projeto selecionado.
+ */
 export default {
   name: 'ProjectModal',
   props: {
-    showModal: { 
+    /**
+     * Flag para controle de exibição do modal/dialog.
+     */
+    showModal: {
       type: Boolean, 
       default: false 
     },
-    project: { 
+    /**
+     * Informações do projeto 'clickado'.
+     */
+    project: {
       type: Object, 
       default: null 
     }
   },
   emits: ['update:showModal'],
   computed: {
+    /**
+     * Responsável por obter e também manipular, de forma indireta, o valor da props 'showModal'.
+     */
     isOpen: {
       get() {
         return this.showModal;
@@ -65,6 +78,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * Fecha o modal/dialog.
+     */
     close() {
       this.isOpen = false;
     }

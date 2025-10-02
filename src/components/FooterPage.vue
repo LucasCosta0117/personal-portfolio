@@ -5,9 +5,15 @@
   </div>
 </template>
 <script>
+/**
+ * Rodapé da página com as insformações básicas de Copyright e Desenvolvimento da aplicação.
+ */
 export default {
   name: 'FooterPage',
   props: {
+    /**
+     * URL do perfil do Github.
+     */
     urlGithub: {
       type: String
     }

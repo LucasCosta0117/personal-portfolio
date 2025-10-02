@@ -2,24 +2,42 @@
   <div class="timeline-card-container">
     <div class="timeline-marker"></div>
     <h2 class="timeline-card-title">{{ title }}</h2>
-    <span class="timeline-card-dates">{{ dates.start }} - {{ dates.end }}</span>
+    <span v-if="dates?.start && dates?.end" class="timeline-card-dates">{{ dates.start }} - {{ dates.end }}</span>
     <span class="timeline-card-company">{{ company }}</span>
     <p class="timeline-card-description">{{ description }}</p>
   </div>
 </template>
 <script>
+/**
+ * Componente, do tipo 'Card', usado para descrever um evento na timeline.
+ * 
+ * Ps.: Quando mais de um deste componente é aninhado, é então criado o efeito de 'Linha do tempo'.
+ */
 export default { 
   name: 'TimelineCard',
   props: {
+    /**
+     * Título/Nome do evento.
+     */
     title: {
       type: String
     },
+    /**
+     * Objeto contendo as datas iniciais e fianis deste evento.
+     *    Ex => dates: { start: '2022', end: '2025' },
+     */
     dates: {
       type: Object
     },
+    /**
+     * Instituição/Local do evento.
+     */
     company: {
       type: String
     },
+    /**
+     * Descrição do evento.
+     */
     description: {
       type: String
     }

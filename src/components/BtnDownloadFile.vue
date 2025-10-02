@@ -9,6 +9,9 @@
 import cvFile_pt from '@/assets/files/LUCAS_DA_SILVA_COSTA-DESENVOLVEDOR-CV_PT.pdf';
 // import cvFile_en from '@/assets/files/LUCAS_DA_SILVA_COSTA-DESENVOLVEDOR-CV_EN.pdf';
 
+/**
+ * Botão que realiza o download do currículo em formato PDF 
+ */
 export default {
   name: 'BtnDownloadFile',
   data() {

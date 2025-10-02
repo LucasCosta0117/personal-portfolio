@@ -76,6 +76,10 @@
 <script>
 import emailjs from '@emailjs/browser';
 
+/**
+ * Formulário de contato que permite envio de mensagens por e-mail.
+ * Utiliza a lib emailjs como api externa para gerenciar o envio dos emails.
+ */
 export default {
   name: 'ContactForm',
   data() {

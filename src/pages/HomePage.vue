@@ -163,6 +163,9 @@ import ProjectModal from '@/components/ProjectModal.vue';
 import ContactForm from '@/components/ContactForm.vue';
 import FooterPage from '@/components/FooterPage.vue';
 
+/**
+ * Página principal da aplicação, contem os componentes e os dados utilizados no portfólio.
+ */
 export default {
   name: 'HelloWorld',
   components: {

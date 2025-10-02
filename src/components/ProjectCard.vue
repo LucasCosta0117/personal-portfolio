@@ -8,15 +8,30 @@
   </div>
 </template>
 <script>
+/**
+ * Componente, do tipo 'Card', para expor as informações de um projeto.
+ */
 export default {
   name: 'ProjectCard',
   props: {
+    /**
+     * Caminho da imagem usada para identificar o projeto.
+     * [Thumbnail]
+     */
     imgPath: {
       type: String
     },
+    /**
+     * Nome do projeto.
+     * [Título]
+     */
     name: {
       type: String
     },
+    /**
+     * Breve descritivo do tipo de aplicação que se trata o projeto.
+     * [Subtítulo]
+     */
     type: {
       type: String
     }

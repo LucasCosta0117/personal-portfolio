@@ -72,6 +72,9 @@ export default {
     }
   },
   computed: {
+    /**
+     * Verifica o tamanho atual da tela do dispositivo para definir qual barra de navefação renderizar.
+     */
     isMobile() {
       return this.windowWidth <= 960;
     },
@@ -83,6 +86,7 @@ export default {
       threshold: 0.2
     };
 
+    //Monta um observer para identificar em qual seção da aplicação está o usuário e destaca-la no meu de navegação.
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -97,6 +101,11 @@ export default {
     });
   },
   methods: {
+    /**
+     * Move a tela do usuário até a seção selecionada no menu da barra de navegação.
+     * 
+     * @param id ID da section selecionada.
+     */
     scrollToSection(id) {
       const section = document.getElementById(id);
       if (section) {

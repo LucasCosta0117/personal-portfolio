@@ -6,9 +6,15 @@
   </div>
 </template>
 <script>
+/**
+ * Padroniza e estiliza o título usado para nomear uma seção.
+ */
 export default {
   name: 'SectionTitle',
   props: {
+    /**
+     * Título da seção
+     */
     title: {
       type: String,
       default: ''
