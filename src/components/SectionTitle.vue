@@ -1,5 +1,10 @@
 <template>
-  <div class="section-title-container">
+  <div 
+    class="section-title-container" 
+    data-aos="fade-down"
+    data-aos-duration="800"
+    data-aos-anchor-placement="bottom-bottom"
+  >
     <span  class="background-text">{{ title }}</span>
     <span class="main-text">{{ title }}</span>
     <div class="underline-highlight"></div>

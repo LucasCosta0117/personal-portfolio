@@ -7,17 +7,17 @@
     <div class="main-content">
       <section id="home">
         <div class="main-title">
-          <p>
+          <p data-aos="fade-right" data-aos-duration="1000">
             Olá, Eu sou
           </p>
-          <div class="my-name">Lucas Costa</div>
+          <div class="my-name" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="linear">Lucas Costa</div>
         </div>
-        <div class="sub-title">
+        <div class="sub-title" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
           <p>
             Desenvolvedor de Software
           </p>
         </div>
-        <div class="social-media">
+        <div class="social-media" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="ease-in-sine">
           <a :href="linkedin.url" target="_blank" :title="linkedin.title">
             <span class="mdi mdi-linkedin"></span>
           </a>
@@ -29,8 +29,8 @@
       <section id="about">
         <SectionTitle :title="aboutTitle"/>
         <div class="presentation">
-          <div class="presentation-profile-img"></div>
-          <div class="presentation-info">
+          <div class="presentation-profile-img" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in"></div>
+          <div class="presentation-info" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in">
             <div class="presentation-text">
               <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
               <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="resume-info">
-          <div class="education-resume">
+          <div class="education-resume" data-aos="fade-right" data-aos-duration="1500">
             <div class="resume-info-title">
               <span class="mdi mdi-school"></span>
               <h3>{{ educationTitle }}</h3>
@@ -58,7 +58,7 @@
               />
             </div>
           </div>
-          <div class="experience-resume">
+          <div class="experience-resume" data-aos="fade-left" data-aos-duration="1500">
             <div class="resume-info-title">
               <span class="mdi mdi-badge-account-horizontal-outline"></span>
               <h3>{{ experienceTitle }}</h3>
@@ -77,7 +77,13 @@
       <section id="services">
         <SectionTitle :title="servicesTitle"/>
         <div class="section-service-cards">
-          <div v-for="serv in servicesList" :key="serv.title" class="service-card-item">
+          <div 
+            v-for="serv in servicesList" :key="serv.title" 
+            class="service-card-item"
+            data-aos="zoom-out-up"
+            data-aos-duration="1500"
+            data-aos-anchor-placement="bottom-bottom"
+          >
             <ServiceCard
               :title="serv.title"
               :icon="serv.icon"
@@ -89,7 +95,14 @@
       <section id="projects">
         <SectionTitle :title="projectsTitle"/>
         <div class="projects-cards">
-          <div v-for="proj in projectsList" :key="proj.name" class="project-card-item">
+          <div 
+            v-for="proj in projectsList" :key="proj.name" 
+            class="project-card-item"
+            data-aos="flip-up"
+            data-aos-duration="800"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-easing="ease-in"
+          >
             <ProjectCard
               :imgPath="proj.imgPath"
               :name="proj.name"
@@ -106,11 +119,11 @@
       <section id="contact">
         <SectionTitle :title="contactTitle"/>
         <div class="contact-container">
-          <div class="contact-form">
+          <div class="contact-form" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in">
             <h3 class="contact-info-title ml-4 mb-1">{{ formTitle }}</h3>
             <ContactForm />
           </div>
-          <div class="contact-info-container">
+          <div class="contact-info-container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in">
             <h3 class="contact-info-title">{{ infoTitle }}</h3>
             <p class="contact-info-description">{{ infoDescription }}</p>
             <div class="contact-info-item">
