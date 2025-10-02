@@ -298,7 +298,7 @@ export default {
       infoDescription: 'Ficou interessado? Deseja me fazer uma proposta? Ou gostaria de desenvolver seu projeto comigo? '+
         'É fácil, basta mandar uma mensagem através do formulário, ou, para um dos canais abaixo, será um prazer falar com você!',
       infoEmail: { layer: 'Email', value: 'lucasscosta.dev@gmail.com' },
-      infoPhone: { layer: 'Telefone / Whatsapp', value: '+55 75 991896258', whatsUrl: 'http://web.whatsapp.com/send/?phone=5575991896258' },
+      infoPhone: { layer: 'Telefone / Whatsapp', value: '+55 75 991896258', whatsUrl: 'http://api.whatsapp.com/send/?phone=5575991896258' },
       infoAddress: { layer: 'Endereço', value: 'São Paulo, SP - Brasil' }
     }
   },
