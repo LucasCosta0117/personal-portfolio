@@ -38,7 +38,8 @@
             </div>
             <img
               class="langs-stats"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=4&theme=vision-friendly-dark&locale=pt-br"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br&custom_title=Meus%20repositórios%20Github"
+              alt="Linguagens mais presentes em meus repositórios Github"
             />
             <BtnDownloadFile/>
           </div>
@@ -567,7 +568,7 @@ export default {
   }
   .presentation-profile-img {
     width: 150rem;
-    height: 33rem;
+    height: 35rem;
   }
   .resume-info {
     flex-direction: row;
