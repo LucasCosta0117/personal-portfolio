@@ -70,6 +70,7 @@
                 :dates="exp.dates"
                 :company="exp.company"
                 :description="exp.description"
+                :tags="exp.tags"
               />
             </div>
           </div>
@@ -265,13 +266,15 @@ export default {
           dates: { start: '2022', end: 'Atual' },
           company: 'Simova',
           description: 'Desenvolvedor Full Stack responsável pela implementação de novas features, suporte e correção de bugs em uma aplicação robusta de tipo SaaS.'+
-          ' Atuando principalmente com as linguagens PHP e VueJs para garantir a melhoria contínua do produto.'
+          ' Atuando principalmente com as linguagens PHP e VueJs para garantir a melhoria contínua do produto.',
+          tags: ['Java', 'PHP', 'VueJs', 'MySQL']
         },
         {
           title: 'Sócio e Diretor Comercial',
           dates: { start: '2021', end: '2022' },
           company: 'Moderna Manutenção Pedrial',
-          description: 'Responsável pela gestão das operações comerciais e participação ativa na coordenação e acompanhamento técnico dos projetos da empresa.'
+          description: 'Responsável pela gestão das operações comerciais e participação ativa na coordenação e acompanhamento técnico dos projetos da empresa.',
+          tags: ['Office', 'AutoCAD', 'PMBok']
         }
       ],
       projectsTitle: 'Projetos',

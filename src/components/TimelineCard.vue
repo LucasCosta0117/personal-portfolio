@@ -5,6 +5,9 @@
     <span v-if="dates?.start && dates?.end" class="timeline-card-dates">{{ dates.start }} - {{ dates.end }}</span>
     <span class="timeline-card-company">{{ company }}</span>
     <p class="timeline-card-description">{{ description }}</p>
+    <div v-if="tags" class="timeline-card-tags">
+      <span v-for="(tag, index) in tags" :key="index+tag">{{ tag }}</span>
+    </div>
   </div>
 </template>
 <script>
@@ -40,6 +43,12 @@ export default {
      */
     description: {
       type: String
+    },
+    /**
+     * Descrição do evento.
+     */
+    tags: {
+      type: Array
     }
   }
 }
@@ -90,5 +99,17 @@ export default {
 }
 .timeline-card-container:hover .timeline-marker {
   background-color: gold;
+}
+.timeline-card-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.timeline-card-tags span {
+  border: 1px solid var(--cinza-transp);
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+  background-color: var(--cinza-transp);
+  color: var(--cinza);
 }
 </style>
