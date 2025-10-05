@@ -16,6 +16,7 @@
     v-model="drawer"
     class="dark-bg"
     v-if="isMobile"
+    temporary
   >
     <v-list>
       <v-list-item
@@ -31,8 +32,9 @@
 
   <!-- Navbar Desktop -->
   <v-navigation-drawer
-    v-else
+    v-if="!isMobile"
     class="dark-bg"
+    permanent
   >
     <v-list>
       <v-list-item>
@@ -80,6 +82,9 @@ export default {
     },
   },
   mounted() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+
     const options = {
       root: null,
       rootMargin: "0px",
@@ -100,7 +105,16 @@ export default {
       if (section) observer.observe(section);
     });
   },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
+    /**
+     * Garante a reatividade através o evento de resize
+     */
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+    },
     /**
      * Move a tela do usuário até a seção selecionada no menu da barra de navegação.
      * 
