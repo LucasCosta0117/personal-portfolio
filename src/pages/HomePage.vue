@@ -7,17 +7,17 @@
     <div class="main-content">
       <section id="home">
         <div class="main-title">
-          <p data-aos="fade-right" data-aos-duration="1000">
+          <p data-aos="fade-right" data-aos-duration="1500">
             Olá, Eu sou
           </p>
-          <div class="my-name" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="linear">Lucas Costa</div>
+          <div class="my-name" data-aos="fade-down" data-aos-duration="1200" data-aos-easing="linear">Lucas Costa</div>
         </div>
-        <div class="sub-title" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-sine">
+        <div class="sub-title" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in">
           <p>
             Desenvolvedor de Software
           </p>
         </div>
-        <div class="social-media" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="ease-in-sine">
+        <div class="social-media" data-aos="fade-up" data-aos-duration="1400" data-aos-easing="ease-in">
           <a :href="linkedin.url" target="_blank" :title="linkedin.title">
             <span class="mdi mdi-linkedin"></span>
           </a>
@@ -30,7 +30,7 @@
         <SectionTitle :title="aboutTitle"/>
         <div class="presentation">
           <div class="presentation-profile-img" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in"></div>
-          <div class="presentation-info" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in">
+          <div class="presentation-info" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in">
             <div class="presentation-text">
               <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
               <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
@@ -59,7 +59,7 @@
               />
             </div>
           </div>
-          <div class="experience-resume" data-aos="fade-left" data-aos-duration="1500">
+          <div class="experience-resume" data-aos="fade-down" data-aos-duration="1500">
             <div class="resume-info-title">
               <span class="mdi mdi-badge-account-horizontal-outline"></span>
               <h3>{{ experienceTitle }}</h3>
@@ -82,7 +82,7 @@
           <div 
             v-for="serv in servicesList" :key="serv.title" 
             class="service-card-item"
-            data-aos="zoom-out-up"
+            data-aos="zoom-in"
             data-aos-duration="1500"
             data-aos-anchor-placement="bottom-bottom"
           >
