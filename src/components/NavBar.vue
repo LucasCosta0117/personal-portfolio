@@ -28,6 +28,10 @@
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
     </v-list>
+
+    <template v-slot:append>
+      <LanguagePicker />
+    </template>
   </v-navigation-drawer>
 
   <!-- Navbar Desktop -->
@@ -51,14 +55,25 @@
         <v-list-item-title>{{ item.text }}</v-list-item-title>
       </v-list-item>
     </v-list>
+
+    <template v-slot:append>
+      <v-container>
+        <LanguagePicker />
+      </v-container>
+    </template>
   </v-navigation-drawer>
 </template>
 <script>
+import LanguagePicker from './LanguagePicker.vue';
+
 /**
  * Barra de navegação (superior e lateral) da aplicação.
  */
 export default {
   name: 'NavBar',
+  components: {
+    LanguagePicker
+  },
   data() {
     return {
       drawer: false,
