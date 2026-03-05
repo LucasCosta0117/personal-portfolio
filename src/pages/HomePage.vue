@@ -298,13 +298,15 @@ export default {
             'Design próprio e executado em VueJs 3.'
         },
         { 
-          imgPath: require('@/assets/images/project-fin.webp'), 
-          name: 'Simulador de Financiamento', 
+          imgPath: require('@/assets/images/project-pdv.webp'), 
+          name: 'IZI PDV - Chaveiro Santiago',
           type: 'Aplicação Web',
-          urlSite: 'https://lucascosta0117.github.io/Simulador-Financiamento/',
-          urlGithub: 'https://github.com/LucasCosta0117/Simulador-Financiamento',
-          description: 'Aplicação que permite realizar uma simulação de financiamento do tipo SAC (Sistema de Amortização Constante), '+
-          'com e sem período de carência. Design próprio e executado em HTML + CSS + JS.'
+          urlSite: '',
+          urlGithub: 'https://github.com/LucasCosta0117/pdv-chaveiro-front',
+          description: 'Sistema de Ponto de Venda (PDV) completo, focado na otimização de operações de vendas e gestão financeira para um Chaveiro.  '+
+          'A aplicação oferece uma interface intuitiva para registro rápido de transações, garantindo a integridade dos dados e a precisão dos cálculos em tempo real. '+ 
+          'As principais Funcionalidades e Soluções incluem: Registro de vendas otimizado feito sob um front-end reativo. '+
+          'Gestão de pagamentos, com validação e correção automática das operações. Controle de persistência segura, a partir da arquitetura back-end em Java Spring Boot 3, JPA/Hibernate e o PostgreSQL serve como SGBD.'
         }
       ],
       showModal: false,
