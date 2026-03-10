@@ -8,14 +8,12 @@
       <section id="home">
         <div class="main-title">
           <p data-aos="fade-right" data-aos-duration="1500">
-            Olá, Eu sou
+            {{ $t('home.greet') }}
           </p>
           <div class="my-name" data-aos="fade-down" data-aos-duration="1200" data-aos-easing="linear">Lucas Costa</div>
         </div>
         <div class="sub-title" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in">
-          <p>
-            Desenvolvedor de Software
-          </p>
+          <p>{{ $t('home.role') }}</p>
         </div>
         <div class="social-media" data-aos="fade-up" data-aos-duration="1400" data-aos-easing="ease-in">
           <a :href="linkedin.url" target="_blank" :title="linkedin.title">
@@ -26,21 +24,22 @@
           </a>
         </div>
       </section>
+
       <section id="about">
-        <SectionTitle :title="aboutTitle"/>
+        <SectionTitle :title="$t('about.title')"/>
         <div class="presentation">
           <div class="presentation-profile-img" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in"></div>
           <div class="presentation-info" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="bottom-bottom" data-aos-easing="ease-in">
             <div class="presentation-text">
-              <h3 class="presentation-text-greet">{{ aboutGreet }}</h3>
-              <h4 class="presentation-text-position">{{ aboutPosition }}</h4>
-              <p class="presentation-text-desc"> {{ aboutPresentation }}</p>
+              <h3 class="presentation-text-greet">{{ $t('about.greet') }}</h3>
+              <h4 class="presentation-text-position">{{ $t('home.role') }}</h4>
+              <p class="presentation-text-desc">{{ $t('about.presentation') }}</p>
             </div>
-            <img
+            <!-- <img
               class="langs-stats"
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br&custom_title=Meus%20repositórios%20Github"
               alt="Linguagens mais presentes em meus repositórios Github"
-            />
+            /> -->
             <BtnDownloadFile/>
           </div>
         </div>
@@ -48,7 +47,7 @@
           <div class="education-resume" data-aos="fade-right" data-aos-duration="1500">
             <div class="resume-info-title">
               <span class="mdi mdi-school"></span>
-              <h3>{{ educationTitle }}</h3>
+              <h3>{{ $t('about.educationTitle') }}</h3>
             </div>
             <div v-for="educ in educationList" :key="educ.title">
               <TimelineCard
@@ -62,7 +61,7 @@
           <div class="experience-resume" data-aos="fade-down" data-aos-duration="1500">
             <div class="resume-info-title">
               <span class="mdi mdi-badge-account-horizontal-outline"></span>
-              <h3>{{ experienceTitle }}</h3>
+              <h3>{{ $t('about.experienceTitle') }}</h3>
             </div>
             <div v-for="exp in experienceList" :key="exp.title">
               <TimelineCard
@@ -76,8 +75,9 @@
           </div>
         </div>
       </section>
+
       <section id="services">
-        <SectionTitle :title="servicesTitle"/>
+        <SectionTitle :title="$t('services.title')"/>
         <div class="section-service-cards">
           <div 
             v-for="serv in servicesList" :key="serv.title" 
@@ -94,8 +94,9 @@
           </div>
         </div>
       </section>
+
       <section id="projects">
-        <SectionTitle :title="projectsTitle"/>
+        <SectionTitle :title="$t('projects.title')"/>
         <div class="projects-cards">
           <div 
             v-for="proj in projectsList" :key="proj.name" 
@@ -104,12 +105,12 @@
             data-aos-duration="800"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-easing="ease-in"
+            @click="openModal(proj)"
           >
             <ProjectCard
               :imgPath="proj.imgPath"
               :name="proj.name"
               :type="proj.type"
-              @click="openModal(proj)"
             />
           </div>
         </div>
@@ -118,29 +119,30 @@
           :project="selectedProject"
         />
       </section>
+
       <section id="contact">
-        <SectionTitle :title="contactTitle"/>
+        <SectionTitle :title="$t('contact.title')"/>
         <div class="contact-container">
           <div class="contact-form" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in">
-            <h3 class="contact-info-title ml-4 mb-1">{{ formTitle }}</h3>
+            <h3 class="contact-info-title ml-4 mb-1">{{ $t('contact.formTitle') }}</h3>
             <ContactForm />
           </div>
           <div class="contact-info-container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in">
-            <h3 class="contact-info-title">{{ infoTitle }}</h3>
-            <p class="contact-info-description">{{ infoDescription }}</p>
+            <h3 class="contact-info-title">{{ $t('contact.infoTitle') }}</h3>
+            <p class="contact-info-description">{{ $t('contact.infoDescription') }}</p>
             <div class="contact-info-item">
               <span class="mdi mdi-email-check-outline contact-info-icon"></span>
               <div>
-                <h4>{{ infoEmail.layer }}</h4>
-                <p>{{ infoEmail.value }}</p>
+                <h4>{{ $t('contact.emailLabel') }}</h4>
+                <p>lucasscosta.dev@gmail.com</p>
               </div>
             </div>
             <div class="contact-info-item">
               <span class="mdi mdi-phone-dial contact-info-icon"></span>
               <div class="contact-info-phone-text">
-                <h4>{{ infoPhone.layer }}</h4>
-                <a :href="infoPhone.whatsUrl" target="_blank" :title="infoPhone.layer">
-                  <p>{{ infoPhone.value }}</p>
+                <h4>{{ $t('contact.phoneLabel') }}</h4>
+                <a href="http://api.whatsapp.com/send/?phone=5575991896258" target="_blank" :title="$t('contact.phoneLabel')">
+                  <p>+55 75 99189-6258</p>
                 </a>
               </div>
             </div>
@@ -156,8 +158,8 @@
             <div class="contact-info-item">
               <span class="mdi mdi-map-marker contact-info-icon"></span>
               <div class="contact-info-address-text">
-                <h4>{{ infoAddress.layer }}</h4>
-                <p>{{ infoAddress.value }}</p>
+                <h4>{{ $t('contact.addressLabel') }}</h4>
+                <p>{{ $t('contact.addressValue') }}</p>
               </div>
             </div>
           </div>
@@ -195,6 +197,8 @@ export default {
   },
   data() {
     return {
+      showModal: false,
+      selectedProject: null,
       linkedin: {
         title: 'Linkedin',
         url: 'https://www.linkedin.com/in/lucas-costa-5a14a8239/',
@@ -203,128 +207,37 @@ export default {
       github: {
         title: 'Github',
         url: 'https://github.com/LucasCosta0117',
-      },
-      aboutTitle: 'Sobre',
-      aboutGreet: 'Olá, satisfação tê-lo aqui!',
-      aboutPosition: 'Desenvolvedor de Software',
-      aboutPresentation: 'Sou um Desenvolvedor de Software Full Stack com mais de 3 anos de experiência.'
-        + ' Entrego código limpo, arquiteturas robustas e interfaces responsivas.'
-        + ' Minhas habilidades abragem websites profissionais, soluções SaaS, APIs seguras e integração com bancos de dados diversos.'
-        + ' Meu objetivo é entregar softwares confiáveis, eficientes e de fácil usabilidade.',
-      servicesTitle: 'Serviços',
-      servicesList: [
-        {
-          title: 'Criação de Websites',
-          icon: 'mdi mdi-monitor-cellphone',
-          description: 'Sites institucionais e landing pages otimizadas para performance e SEO, garantindo boa experiência ao usuário em qualquer dispositivo.'
-        },
-        {
-          title: 'Integração de APIs',
-          icon: 'mdi mdi-lan-connect',
-          description: 'Conexão de sistemas através de APIs RESTful e integrações seguras entre diferentes plataformas e ferramentas.'
-        },
-        {
-          title: 'Banco de Dados',
-          icon: 'mdi mdi-database-arrow-left',
-          description: 'Modelagem, implementação e otimização de bancos de dados relacionais e não-relacionais.'
-        },
-        {
-          title: 'Desenvolvimento Full Stack',
-          icon: 'mdi mdi-webpack',
-          description: 'Criação de aplicações modernas, seguras e escaláveis, unindo back-end robusto com front-end responsivo e otimizado.'
-        },
-        {
-          title: 'DevOps & Deploy',
-          icon: 'mdi mdi-console',
-          description: 'Conhecimento de processos de build, testes e deploy, com experiência em Docker, CI/CD e serviços em nuvem.'
-        },
-        {
-          title: 'Soluções SaaS',
-          icon: 'mdi mdi-hexagon-multiple',
-          description: 'Experiência no desenvolvimento e manutenção de sistemas SaaS multi-tenant para o mercado.'
-        }
-      ],
-      educationTitle: 'Formação',
-      educationList: [
-        {
-          title: 'Análise e Desenvolvimento de Sistemas',
-          dates: { start: '2022', end: '2025' },
-          company: 'UNIFACS',
-          description: 'Curso Superior de Tecnologia em Análise de Sistemas de Computação pela Universidade Salvador.'
-        },
-        {
-          title: 'Engenharia Civil',
-          dates: { start: '2014', end: '2025' },
-          company: 'UFBA',
-          description: 'Bacharelado em Engenharia Civil pela Universidade Federal da Bahia.'
-        }
-      ],
-      experienceTitle: 'Experiência',
-      experienceList: [
-        {
-          title: 'Desenvolvedor de Software',
-          dates: { start: '2022', end: 'Atual' },
-          company: 'Simova',
-          description: 'Desenvolvedor Full Stack responsável pela implementação de novas features, suporte e correção de bugs em uma aplicação robusta de tipo SaaS.'+
-          ' Atuando principalmente com as linguagens PHP e VueJs para garantir a melhoria contínua do produto.',
-          tags: ['Java', 'PHP', 'VueJs', 'MySQL']
-        },
-        {
-          title: 'Sócio e Diretor Comercial',
-          dates: { start: '2021', end: '2022' },
-          company: 'Moderna Manutenção Pedrial',
-          description: 'Responsável pela gestão das operações comerciais e participação ativa na coordenação e acompanhamento técnico dos projetos da empresa.',
-          tags: ['Office', 'AutoCAD', 'PMBok']
-        }
-      ],
-      projectsTitle: 'Projetos',
-      projectsList: [
-        { 
-          imgPath: require('@/assets/images/project-b2.webp'),
-          name: 'B2 Engenharia', 
-          type: 'Site Institucional',
-          urlSite: 'https://engenhariab2.com/',
-          urlGithub: 'https://github.com/LucasCosta0117/b2-engenharia',
-          description: 'Site institucional desenvolvido para empresa B2 Engenharia e Construção. '+
-            'Design elaborado no Figma e executado em VueJs 3 com Vuetify.'
-        },
-        { 
-          imgPath: require('@/assets/images/project-salus.webp'),
-          name: 'Salus Ebook', 
-          type: 'Landing Page',
-          urlSite: 'https://www.salusbooks.com.br/',
-          urlGithub: 'https://github.com/LucasCosta0117/landing-page-enxaqueca',
-          description: 'Landing Page criada para Salus Book para venda do livro digital sobre enxaqueca . '+
-            'Design próprio e executado em VueJs 3.'
-        },
-        { 
-          imgPath: require('@/assets/images/project-pdv.webp'), 
-          name: 'IZI PDV - Chaveiro Santiago',
-          type: 'Aplicação Web',
-          urlSite: '',
-          urlGithub: 'https://github.com/LucasCosta0117/pdv-chaveiro-front',
-          description: 'Sistema de Ponto de Venda (PDV) completo, focado na otimização de operações de vendas e gestão financeira para um Chaveiro.  '+
-          'A aplicação oferece uma interface intuitiva para registro rápido de transações, garantindo a integridade dos dados e a precisão dos cálculos em tempo real. '+ 
-          'As principais Funcionalidades e Soluções incluem: Registro de vendas otimizado feito sob um front-end reativo. '+
-          'Gestão de pagamentos, com validação e correção automática das operações. Controle de persistência segura, a partir da arquitetura back-end em Java Spring Boot 3, JPA/Hibernate e o PostgreSQL serve como SGBD.'
-        }
-      ],
-      showModal: false,
-      selectedProject: null,
-      contactTitle: 'Contato',
-      formTitle: 'Envie sua mensagem',
-      infoTitle: 'Informações Para Contato',
-      infoDescription: 'Ficou interessado? Deseja me fazer uma proposta? Ou gostaria de desenvolver seu projeto comigo? '+
-        'É fácil, basta mandar uma mensagem através do formulário, ou, para um dos canais abaixo, será um prazer falar com você!',
-      infoEmail: { layer: 'Email', value: 'lucasscosta.dev@gmail.com' },
-      infoPhone: { layer: 'Telefone / Whatsapp', value: '+55 75 991896258', whatsUrl: 'http://api.whatsapp.com/send/?phone=5575991896258' },
-      infoAddress: { layer: 'Endereço', value: 'São Paulo, SP - Brasil' }
+      }
+    }
+  },
+  computed: {
+    // Listas baseadas no idioma atual
+    educationList() { 
+      return this.$tm('about.educationList');
+    },
+    experienceList() { 
+      return this.$tm('about.experienceList'); 
+    },
+    servicesList() {
+      return this.$tm('services.items').map((s, index) => ({ ...s, icon: this.getServiceIcon(index) }));
+    },
+    projectsList() {
+      const images = [
+        require('@/assets/images/project-b2.webp'),
+        require('@/assets/images/project-salus.webp'),
+        require('@/assets/images/project-pdv.webp')
+      ];
+      return this.$tm('projects.items').map((p, i) => ({ ...p, imgPath: images[i] }));
     }
   },
   methods: {
     openModal(proj) {
       this.showModal = true;
       this.selectedProject = proj;
+    },
+    getServiceIcon(index) {
+      const icons = ['mdi-monitor-cellphone', 'mdi-lan-connect', 'mdi-database-arrow-left', 'mdi-webpack', 'mdi-console', 'mdi-hexagon-multiple'];
+      return `mdi ${icons[index]}`;
     }
   }
 }

@@ -78,13 +78,6 @@ export default {
     return {
       drawer: false,
       windowWidth: window.innerWidth,
-      menuItens: [
-        { text: 'Início', id: 'home'},
-        { text: 'Sobre', id: 'about'},
-        { text: 'Serviços', id: 'services'},
-        { text: 'Projetos', id: 'projects'},
-        { text: 'Contato', id: 'contact'}
-      ],
       currentSection: 'home'
     }
   },
@@ -95,6 +88,18 @@ export default {
     isMobile() {
       return this.windowWidth <= 960;
     },
+    /**
+     * Nomes e ID's das seções apresentadas no menu da aplicação.
+     */
+    menuItens() {
+      return [
+        { text: this.$t('NavBar.menu.home'), id: 'home' },
+        { text: this.$t('NavBar.menu.about'), id: 'about' },
+        { text: this.$t('NavBar.menu.services'), id: 'services' },
+        { text: this.$t('NavBar.menu.projects'), id: 'projects' },
+        { text: this.$t('NavBar.menu.contact'), id: 'contact' }
+      ]
+    }
   },
   mounted() {
     this.handleResize();

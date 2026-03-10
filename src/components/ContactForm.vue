@@ -5,30 +5,30 @@
         v-model="form.name"
         :counter="20"
         :error-messages="errors.name"
-        :label="label.name"
-        :placeholder="placeholder.name"
+        :label="$t('ContactForm.label.name')"
+        :placeholder="$t('ContactForm.placeholder.name')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.phone"
         :counter="11"
         :error-messages="errors.phone"
-        :label="label.phone"
-        :placeholder="placeholder.phone"
+        :label="$t('ContactForm.label.phone')"
+        :placeholder="$t('ContactForm.placeholder.phone')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.email"
         :error-messages="errors.email"
-        :label="label.email"
-        :placeholder="placeholder.email"
+        :label="$t('ContactForm.label.email')"
+        :placeholder="$t('ContactForm.placeholder.email')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.subject"
         :error-messages="errors.subject"
-        :label="label.subject"
-        :placeholder="placeholder.subject"
+        :label="$t('ContactForm.label.subject')"
+        :placeholder="$t('ContactForm.placeholder.subject')"
       ></v-text-field>
 
       <v-textarea
@@ -36,23 +36,17 @@
         v-model="form.message"
         :counter="300"
         :error-messages="errors.message"
-        :label="label.message"
-        :placeholder="placeholder.message"
+        :label="$t('ContactForm.label.message')"
+        :placeholder="$t('ContactForm.placeholder.message')"
       ></v-textarea>
 
       <v-row justify="space-around">
-        <v-btn
-          type="submit"
-          class="btn-submit-form"
-        >
-          Enviar
+        <v-btn type="submit" class="btn-submit-form">
+          {{ $t('ContactForm.buttons.submit') }}
         </v-btn>
 
-        <v-btn
-          class="btn-clear-form"
-          @click.prevent="handleReset"
-        >
-          Limpar
+        <v-btn class="btn-clear-form" @click.prevent="handleReset">
+          {{ $t('ContactForm.buttons.clear') }}
         </v-btn>
       </v-row>
     </form>
@@ -100,20 +94,6 @@ export default {
         email: null,
         subject: null,
         message: null
-      },
-      label: {
-        name: 'Nome',
-        phone: 'Telefone',
-        email: 'E-mail',
-        subject: 'Assunto',
-        message: 'Mensagem'
-      },
-      placeholder: {
-        name: 'Lucas Costa',
-        phone: '75 99189-6258',
-        email: 'contato@mail.com',
-        subject: 'Sobre o que deseja falar?',
-        message: 'Compartilhe seu sonho ou envie sua proposta'
       }
     }
   },
@@ -134,31 +114,31 @@ export default {
 
       // name
       if (!this.form.name || this.form.name.trim().length < 2) {
-        this.errors.name = ['O nome precisa ter pelo menos 2 caracteres.'];
+        this.errors.name = [this.$t('ContactForm.errors.name')];
         valid = false;
       }
 
       // phone: permite apenas numeros e hífen e tamanho mínimo 11
       if (!/^[0-9-]{11,}$/.test(String(this.form.phone || ''))) {
-        this.errors.phone = ['O número precisa ter pelo menos 11 dígitos (Incluindo o DDD e sem espaços).'];
+        this.errors.phone = [this.$t('ContactForm.errors.phone')];
         valid = false;
       }
 
       // email
       if (!/.+@.+\..+/.test(String(this.form.email || ''))) {
-        this.errors.email = ['E-mail fornecido não é válido.'];
+        this.errors.email = [this.$t('ContactForm.errors.email')];
         valid = false;
       }
 
       // subject
       if (!this.form.subject || this.form.subject.trim().length < 2) {
-        this.errors.subject = ['O assunto para o e-mail precisa ter pelo menos 2 caracteres.'];
+        this.errors.subject = [this.$t('ContactForm.errors.subject')];
         valid = false;
       }
 
       // message (máximo 300)
       if (this.form.message && this.form.message.length > 300) {
-        this.errors.message = ['Mensagem muito longa, reduza para 300 caracteres.'];
+        this.errors.message = [this.$t('ContactForm.errors.message')];
         valid = false;
       }
 
@@ -199,11 +179,11 @@ export default {
       // chama emailjs
       emailjs.send(serviceID, templateID, templateParams)
         .then(() => {
-          this.showMessage('Mensagem enviada com sucesso!', 'success');
+          this.showMessage(this.$t('ContactForm.feedback.success'), 'success');
           this.handleReset();
         })
         .catch(error => {
-           this.showMessage('Erro ao enviar: ' + (error?.text || error), 'error');
+           this.showMessage(this.$t('ContactForm.feedback.error') + (error?.text || error), 'error');
         });
     },
     handleReset() {

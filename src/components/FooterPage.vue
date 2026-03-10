@@ -1,7 +1,10 @@
 <template>
   <div class="footer-container">
-    <p>Copyright © 2025 Todos os direitos reservados</p>
-    <p>Developed by <a :href="urlGithub" target="_blank">Lucas Costa</a></p>
+    <p>{{ $t('FooterPage.copyright') }}</p>
+    <p>
+      {{ $t('FooterPage.developedBy') }} 
+      <a :href="urlGithub" target="_blank">Lucas Costa</a>
+    </p>
   </div>
 </template>
 <script>
@@ -15,7 +18,8 @@ export default {
      * URL do perfil do Github.
      */
     urlGithub: {
-      type: String
+      type: String,
+      default: 'https://github.com/LucasCosta0117'
     }
   },
   date() {
