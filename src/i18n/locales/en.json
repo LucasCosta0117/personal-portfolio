@@ -1,1 +1,102 @@
-{}
+{
+  "home": {
+    "greet": "Hi, I am",
+    "role": "Software Developer"
+  },
+  "about": {
+    "title": "About",
+    "greet": "Hi, nice to have you here!",
+    "presentation": "I am a Full Stack Software Developer with over 3 years of experience. I deliver clean code, robust architectures, and responsive interfaces. My skills cover professional websites, SaaS solutions, secure APIs, and integration with various databases. My goal is to deliver reliable, efficient, and user-friendly software.",
+    "statsTitle": "My GitHub Repositories",
+    "statsAlt": "Most present languages in my GitHub repositories",
+    "educationTitle": "Education",
+    "educationList": [
+      { "title": "Systems Analysis and Development", "dates": { "start": "2022", "end": "2025" }, "company": "UNIFACS", "description": "Higher Technology Course in Computer Systems Analysis from Salvador University." },
+      { "title": "Civil Engineering", "dates": { "start": "2014", "end": "2025" }, "company": "UFBA", "description": "Bachelor of Civil Engineering from the Federal University of Bahia." }
+    ],
+    "experienceTitle": "Experience",
+    "experienceList": [
+      { "title": "Software Developer", "dates": { "start": "2022", "end": "Current" }, "company": "Simova", "description": "Full Stack Developer responsible for implementing new features, support, and bug fixes in a robust SaaS application. Working mainly with PHP and VueJs to ensure continuous product improvement.", "tags": ["Java", "PHP", "VueJs", "MySQL"] },
+      { "title": "Partner and Commercial Director", "dates": { "start": "2021", "end": "2022" }, "company": "Moderna Manutenção Predial", "description": "Responsible for managing commercial operations and active participation in technical coordination and project monitoring.", "tags": ["Office", "AutoCAD", "PMBok"] }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      { "title": "Website Creation", "description": "Institutional sites and landing pages optimized for performance and SEO." },
+      { "title": "API Integration", "description": "System connection through RESTful APIs and secure integrations between different platforms." },
+      { "title": "Databases", "description": "Modeling, implementation, and optimization of relational and non-relational databases." },
+      { "title": "Full Stack Development", "description": "Creation of modern, secure, and scalable applications, combining a robust back-end with responsive front-end." },
+      { "title": "DevOps & Deploy", "description": "Build, test, and deploy processes with Docker and CI/CD." },
+      { "title": "SaaS Solutions", "description": "Experience in the development and maintenance of multi-tenant SaaS systems for the market." }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      { "name": "B2 Engenharia", "type": "Institutional Website", "description": "Institutional website developed for B2 Engenharia. Design created in Figma and executed in VueJs 3." },
+      { "name": "Salus Ebook", "type": "Landing Page", "description": "Landing Page created for Salus Book to sell a digital book about migraines. Own design executed in VueJs 3." },
+      { "name": "IZI POS", "type": "Web Application", "description": "Complete Point of Sale (POS) system focused on optimizing sales operations and financial management for a locksmith. Intuitive and responsive interface in Vue3, business rules and back-end architecture in Java + Spring Boot 3, and data persistence with PostgreSQL." }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "formTitle": "Send your message",
+    "infoTitle": "Contact Information",
+    "infoDescription": "Interested? Want to make a proposal? Just send a message!",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone / Whatsapp",
+    "addressLabel": "Address",
+    "addressValue": "Sao Paulo, SP - Brazil",
+    "linkedinLabel": "Linkedin",
+    "linkedinUrl": "https://www.linkedin.com/in/lucas-costa-5a14a8239/",
+    "linkedinTinyUrl": "linkedin.com/in/lucas-costa-5a14a8239"
+  },
+  "BtnDownload": {
+    "label": "Download CV"
+  },
+  "ContactForm": {
+    "labels": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Lucas Costa",
+      "phone": "75 99189-6258",
+      "email": "contact{'@'}mail.com",
+      "subject": "What do you want to talk about?",
+      "message": "Share your dream or send your proposal"
+    },
+    "buttons": {
+      "send": "Send",
+      "clear": "Clear"
+    },
+    "errors": {
+      "name": "Name must be at least 2 characters long.",
+      "phone": "The number must have at least 11 digits (Including DDD, no spaces).",
+      "email": "Provided email is not valid.",
+      "subject": "Email subject must be at least 2 characters long.",
+      "message": "Message too long, please reduce to 300 characters."
+    },
+    "feedback": {
+      "success": "Message sent successfully!",
+      "error": "Error sending: "
+    }
+  },
+  "FooterPage": {
+    "copyright": "Copyright © 2025 All rights reserved",
+    "developedBy": "Developed by"
+  },
+  "NavBar": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  }
+}

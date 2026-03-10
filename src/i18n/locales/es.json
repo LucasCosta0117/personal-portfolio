@@ -1,1 +1,102 @@
-{}
+{
+  "home": {
+    "greet": "Hola, Soy",
+    "role": "Desarrollador de Software"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "greet": "¡Hola, un placer tenerte aquí!",
+    "presentation": "Soy un Desarrollador de Software Full Stack con más de 3 años de experiencia. Entrego código limpio, arquitecturas robustas e interfaces responsivas. Mis habilidades incluyen sitios web profesionales, soluciones SaaS, APIs seguras e integración con diversas bases de datos. Mi objetivo es entregar software confiable, eficiente y fácil de usar.",
+    "statsTitle": "Mis repositorios de GitHub",
+    "statsAlt": "Lenguajes más presentes en mis repositorios de GitHub",
+    "educationTitle": "Formación",
+    "educationList": [
+      { "title": "Análisis y Desarrollo de Sistemas", "dates": { "start": "2022", "end": "2025" }, "company": "UNIFACS", "description": "Carrera Tecnológica en Análisis de Sistemas por la Universidad Salvador." },
+      { "title": "Ingeniería Civil", "dates": { "start": "2014", "end": "2025" }, "company": "UFBA", "description": "Licenciatura en Ingeniería Civil por la Universidad Federal de Bahía." }
+    ],
+    "experienceTitle": "Experiencia",
+    "experienceList": [
+      { "title": "Desarrollador de Software", "dates": { "start": "2022", "end": "Actual" }, "company": "Simova", "description": "Desarrollador Full Stack responsable de la implementación de nuevas funcionalidades, soporte y corrección de errores en una aplicación SaaS robusta.", "tags": ["Java", "PHP", "VueJs", "MySQL"] },
+      { "title": "Socio y Director Comercial", "dates": { "start": "2021", "end": "2022" }, "company": "Moderna Manutenção Predial", "description": "Responsable de la gestión de operaciones comerciales y participación activa en la coordinación técnica de proyectos.", "tags": ["Office", "AutoCAD", "PMBok"] }
+    ]
+  },
+  "services": {
+    "title": "Servicios",
+    "items": [
+      { "title": "Creación de Sitios Web", "description": "Sitios institucionales y landing pages optimizados para rendimiento y SEO." },
+      { "title": "Integración de APIs", "description": "Conexión de sistemas a través de APIs RESTful e integraciones seguras." },
+      { "title": "Bases de Datos", "description": "Modelado, implementación y optimización de bases de datos." },
+      { "title": "Desarrollo Full Stack", "description": "Creación de aplicaciones modernas y escalables, combinando back-end con front-end responsivo." },
+      { "title": "DevOps y Deploy", "description": "Procesos de build, pruebas y despliegue con Docker y CI/CD." },
+      { "title": "Soluciones SaaS", "description": "Experiencia en el desarrollo y mantenimiento de sistemas SaaS multi-tenant para el mercado." }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      { "name": "B2 Ingeniería", "type": "Sitio Institucional", "description": "Sitio institucional desarrollado para la empresa B2 Engenharia. Diseño en Figma y ejecutado en VueJs 3." },
+      { "name": "Salus Ebook", "type": "Landing Page", "description": "Landing Page creada para Salus Book para la venta de un libro digital sobre la migraña. Diseño propio y ejecutado en VueJs 3." },
+      { "name": "IZI PDV", "type": "Aplicación Web", "description": "Sistema de Punto de Venda (PDV) completo, enfocado en la optimización de operaciones de ventas y gestión financiera para un Cerrajero. Interfaz intuitiva en Vue3, reglas de negocio y arquitectura back-end en Java + Spring Boot 3 y persistencia con PostgreSQL." }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "formTitle": "Envía tu mensaje",
+    "infoTitle": "Información de Contacto",
+    "infoDescription": "¿Estás interesado? ¿Quieres hacerme una propuesta? ¡Es fácil, solo envía un mensaje!",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono / Whatsapp",
+    "addressLabel": "Dirección",
+    "addressValue": "San Pablo, SP - Brasil",
+    "linkedinLabel": "Linkedin",
+    "linkedinUrl": "https://www.linkedin.com/in/lucas-costa-5a14a8239/",
+    "linkedinTinyUrl": "linkedin.com/in/lucas-costa-5a14a8239"
+  },
+  "BtnDownload": {
+    "label": "Descargar Currículum"
+  },
+  "ContactForm": {
+    "labels": {
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Lucas Costa",
+      "phone": "75 99189-6258",
+      "email": "contacto{'@'}mail.com",
+      "subject": "¿De qué quieres hablar?",
+      "message": "Comparte tu sueño o envía tu propuesta"
+    },
+    "buttons": {
+      "send": "Enviar",
+      "clear": "Limpiar"
+    },
+    "errors": {
+      "name": "El nombre debe tener al menos 2 caracteres.",
+      "phone": "El número debe tener al menos 11 dígitos (Incluyendo DDD, sin espacios).",
+      "email": "El correo electrónico proporcionado no es válido.",
+      "subject": "El asunto del correo debe tener al menos 2 caracteres.",
+      "message": "Mensaje demasiado largo, reduzca a 300 caracteres."
+    },
+    "feedback": {
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar: "
+    }
+  },
+  "FooterPage": {
+    "copyright": "Copyright © 2025 Todos los derechos reservados",
+    "developedBy": "Desarrollado por"
+  },
+  "NavBar": {
+    "menu": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  }
+}
