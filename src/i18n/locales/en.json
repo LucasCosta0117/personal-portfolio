@@ -7,8 +7,6 @@
     "title": "About",
     "greet": "Hi, nice to have you here!",
     "presentation": "I am a Full Stack Software Developer with over 3 years of experience. I deliver clean code, robust architectures, and responsive interfaces. My skills cover professional websites, SaaS solutions, secure APIs, and integration with various databases. My goal is to deliver reliable, efficient, and user-friendly software.",
-    "statsTitle": "My GitHub Repositories",
-    "statsAlt": "Most present languages in my GitHub repositories",
     "educationTitle": "Education",
     "educationList": [
       { "title": "Systems Analysis and Development", "dates": { "start": "2022", "end": "2025" }, "company": "UNIFACS", "description": "Higher Technology Course in Computer Systems Analysis from Salvador University." },
@@ -98,5 +96,11 @@
       "projects": "Projects",
       "contact": "Contact"
     }
-  }
+  },
+  "GithubStats": {
+  "topLangs": "Top Technologies",
+  "featuredProjects": "Featured Projects",
+  "noFeaturedProjects": "No starred projects at the moment",
+  "noDescription": "Project description on GitHub"
+}
 }

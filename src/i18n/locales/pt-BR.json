@@ -7,8 +7,6 @@
     "title": "Sobre",
     "greet": "Olá, satisfação tê-lo aqui!",
     "presentation": "Sou um Desenvolvedor de Software Full Stack com mais de 3 anos de experiência. Entrego código limpo, arquiteturas robustas e interfaces responsivas. Minhas habilidades abrangem websites profissionais, soluções SaaS, APIs seguras e integração com bancos de dados diversos. Meu objetivo é entregar softwares confiáveis, eficientes e de fácil usabilidade.",
-    "statsTitle": "Meus repositórios Github",
-    "statsAlt": "Linguagens mais presentes em meus repositórios Github",
     "educationTitle": "Formação",
     "educationList": [
       { "title": "Análise e Desenvolvimento de Sistemas", "dates": { "start": "2022", "end": "2025" }, "company": "UNIFACS", "description": "Curso Superior de Tecnologia em Análise de Sistemas de Computação pela Universidade Salvador." },
@@ -98,5 +96,11 @@
       "projects": "Projetos",
       "contact": "Contato"
     }
+  },
+  "GithubStats": {
+    "topLangs": "Principais Tecnologias",
+    "featuredProjects": "Projetos em Destaque",
+    "noFeaturedProjects": "Nenhum projeto marcado com estrela no momento",
+    "noDescription": "Descrição do projeto no GitHub"
   }
 }

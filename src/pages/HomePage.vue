@@ -35,11 +35,7 @@
               <h4 class="presentation-text-position">{{ $t('home.role') }}</h4>
               <p class="presentation-text-desc">{{ $t('about.presentation') }}</p>
             </div>
-            <!-- <img
-              class="langs-stats"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascosta0117&layout=compact&langs_count=6&theme=vision-friendly-dark&locale=pt-br&custom_title=Meus%20repositórios%20Github"
-              alt="Linguagens mais presentes em meus repositórios Github"
-            /> -->
+            <GithubStats />
             <BtnDownloadFile/>
           </div>
         </div>
@@ -179,6 +175,7 @@ import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectModal from '@/components/ProjectModal.vue';
 import ContactForm from '@/components/ContactForm.vue';
 import FooterPage from '@/components/FooterPage.vue';
+import GithubStats from '@/components/GithubStats.vue';
 
 /**
  * Página principal da aplicação, contem os componentes e os dados utilizados no portfólio.
@@ -193,7 +190,8 @@ export default {
     ProjectCard,
     ProjectModal,
     ContactForm,
-    FooterPage
+    FooterPage,
+    GithubStats
   },
   data() {
     return {
