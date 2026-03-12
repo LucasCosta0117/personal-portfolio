@@ -94,9 +94,9 @@ export default {
     menuItens() {
       return [
         { text: this.$t('NavBar.menu.home'), id: 'home' },
+        { text: this.$t('NavBar.menu.projects'), id: 'projects' },
         { text: this.$t('NavBar.menu.about'), id: 'about' },
         { text: this.$t('NavBar.menu.services'), id: 'services' },
-        { text: this.$t('NavBar.menu.projects'), id: 'projects' },
         { text: this.$t('NavBar.menu.contact'), id: 'contact' }
       ]
     }

@@ -25,6 +25,31 @@
         </div>
       </section>
 
+      <section id="projects">
+        <SectionTitle :title="$t('projects.title')"/>
+        <div class="projects-cards">
+          <div 
+            v-for="proj in projectsList" :key="proj.name" 
+            class="project-card-item"
+            data-aos="flip-up"
+            data-aos-duration="800"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-easing="ease-in"
+            @click="openModal(proj)"
+          >
+            <ProjectCard
+              :imgPath="proj.imgPath"
+              :name="proj.name"
+              :type="proj.type"
+            />
+          </div>
+        </div>
+        <ProjectModal
+          v-model:showModal="showModal"
+          :project="selectedProject"
+        />
+      </section>
+
       <section id="about">
         <SectionTitle :title="$t('about.title')"/>
         <div class="presentation">
@@ -89,31 +114,6 @@
             />
           </div>
         </div>
-      </section>
-
-      <section id="projects">
-        <SectionTitle :title="$t('projects.title')"/>
-        <div class="projects-cards">
-          <div 
-            v-for="proj in projectsList" :key="proj.name" 
-            class="project-card-item"
-            data-aos="flip-up"
-            data-aos-duration="800"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-easing="ease-in"
-            @click="openModal(proj)"
-          >
-            <ProjectCard
-              :imgPath="proj.imgPath"
-              :name="proj.name"
-              :type="proj.type"
-            />
-          </div>
-        </div>
-        <ProjectModal
-          v-model:showModal="showModal"
-          :project="selectedProject"
-        />
       </section>
 
       <section id="contact">
@@ -223,9 +223,25 @@ export default {
       const images = [
         require('@/assets/images/project-b2.webp'),
         require('@/assets/images/project-salus.webp'),
-        require('@/assets/images/project-pdv.webp')
+        require('@/assets/images/project-izi_pdv.webp')
       ];
-      return this.$tm('projects.items').map((p, i) => ({ ...p, imgPath: images[i] }));
+      const ghLinks = [
+        [ 'https://github.com/LucasCosta0117/b2-engenharia' ],
+        [ 'https://github.com/LucasCosta0117/landing-page-enxaqueca' ],
+        [ 'https://github.com/LucasCosta0117/pdv-chaveiro-front', 'https://github.com/LucasCosta0117/pdv-chaveiro-back' ]
+      ];
+      const webLinks = [
+        'https://www.b2engenhariaeconstrucao.com.br/',
+        'https://salusbooks.com.br/',
+        ''
+      ];
+
+      let finalList = this.$tm('projects.items');
+      finalList = finalList.map((p, i) => ({ ...p, imgPath: images[i] }));
+      finalList = finalList.map((p, i) => ({ ...p, urlGithub: ghLinks[i] }));
+      finalList = finalList.map((p, i) => ({ ...p, urlSite: webLinks[i] }));
+
+      return finalList;
     }
   },
   methods: {

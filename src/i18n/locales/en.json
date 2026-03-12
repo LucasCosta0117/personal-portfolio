@@ -32,9 +32,9 @@
   "projects": {
     "title": "Projects",
     "items": [
-      { "name": "B2 Engenharia", "type": "Institutional Website", "description": "Institutional website developed for B2 Engenharia. Design created in Figma and executed in VueJs 3." },
+      { "name": "B2 Engenharia", "type": "Institutional Website", "description": "Institutional website developed for B2 Engenharia. Own design created in Figma and executed in VueJs 3." },
       { "name": "Salus Ebook", "type": "Landing Page", "description": "Landing Page created for Salus Book to sell a digital book about migraines. Own design executed in VueJs 3." },
-      { "name": "IZI POS", "type": "Web Application", "description": "Complete Point of Sale (POS) system focused on optimizing sales operations and financial management for a locksmith. Intuitive and responsive interface in Vue3, business rules and back-end architecture in Java + Spring Boot 3, and data persistence with PostgreSQL." }
+      { "name": "IZI POS", "type": "Web Application", "description": "[IN PROGRESS] Complete Point of Sale (POS) system focused on optimizing sales operations and financial management for a locksmith. Intuitive and responsive interface in Vue3, business rules and back-end architecture in Java + Spring Boot 3, and data persistence with PostgreSQL." }
     ]
   },
   "contact": {

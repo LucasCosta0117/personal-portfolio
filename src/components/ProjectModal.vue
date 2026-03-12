@@ -28,14 +28,16 @@
         >
           Site
         </v-btn>
-        <v-btn
-          v-if="project?.urlGithub"
-          :href="project.urlGithub"
-          target="_blank"
-          prepend-icon="mdi-github"
-        >
-          GitHub
-        </v-btn>
+        <template v-if="project?.urlGithub">
+          <v-btn
+            v-for="gbLink in project.urlGithub" :key="gbLink"
+            :href="gbLink"
+            target="_blank"
+            prepend-icon="mdi-github"
+          >
+            GitHub
+          </v-btn>
+        </template>
       </v-card-actions>
     </v-card>
   </v-dialog>

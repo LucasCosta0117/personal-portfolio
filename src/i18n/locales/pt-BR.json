@@ -32,9 +32,9 @@
   "projects": {
     "title": "Projetos",
     "items": [
-      { "name": "B2 Engenharia", "type": "Site Institucional", "description": "Site desenvolvido para empresa B2 Engenharia. Design no Figma e executado em VueJs 3." },
+      { "name": "B2 Engenharia", "type": "Site Institucional", "description": "Site desenvolvido para empresa B2 Engenharia. Design próprio no Figma e executado em VueJs 3." },
       { "name": "Salus Ebook", "type": "Landing Page", "description": "Landing Page para venda de livro digital sobre enxaqueca. Design próprio e executado em VueJs 3." },
-      { "name": "IZI PDV", "type": "Aplicação Web", "description": "Sistema de Ponto de Venda (PDV) completo, focado na otimização de operações de vendas e gestão financeira para um Chaveiro. Interface intuita e responsiva em Vue3, regras de negócio e arquitetura back-end em Java + Spring Boot 3 e, persistência dos dados com PostgreSQL." }
+      { "name": "IZI PDV", "type": "Aplicação Web", "description": "[EM ANDAMENTO] Sistema de Ponto de Venda (PDV) completo, focado na otimização de operações de vendas e gestão financeira para um Chaveiro. Interface intuita e responsiva em Vue3, regras de negócio e arquitetura back-end em Java + Spring Boot 3 e, persistência dos dados com PostgreSQL." }
     ]
   },
   "contact": {
