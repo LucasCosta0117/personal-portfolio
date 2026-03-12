@@ -5,30 +5,30 @@
         v-model="form.name"
         :counter="20"
         :error-messages="errors.name"
-        :label="$t('ContactForm.label.name')"
-        :placeholder="$t('ContactForm.placeholder.name')"
+        :label="$t('ContactForm.labels.name')"
+        :placeholder="$t('ContactForm.placeholders.name')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.phone"
         :counter="11"
         :error-messages="errors.phone"
-        :label="$t('ContactForm.label.phone')"
-        :placeholder="$t('ContactForm.placeholder.phone')"
+        :label="$t('ContactForm.labels.phone')"
+        :placeholder="$t('ContactForm.placeholders.phone')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.email"
         :error-messages="errors.email"
-        :label="$t('ContactForm.label.email')"
-        :placeholder="$t('ContactForm.placeholder.email')"
+        :label="$t('ContactForm.labels.email')"
+        :placeholder="$t('ContactForm.placeholders.email')"
       ></v-text-field>
 
       <v-text-field
         v-model="form.subject"
         :error-messages="errors.subject"
-        :label="$t('ContactForm.label.subject')"
-        :placeholder="$t('ContactForm.placeholder.subject')"
+        :label="$t('ContactForm.labels.subject')"
+        :placeholder="$t('ContactForm.placeholders.subject')"
       ></v-text-field>
 
       <v-textarea
@@ -36,13 +36,13 @@
         v-model="form.message"
         :counter="300"
         :error-messages="errors.message"
-        :label="$t('ContactForm.label.message')"
-        :placeholder="$t('ContactForm.placeholder.message')"
+        :label="$t('ContactForm.labels.message')"
+        :placeholder="$t('ContactForm.placeholders.message')"
       ></v-textarea>
 
       <v-row justify="space-around">
         <v-btn type="submit" class="btn-submit-form">
-          {{ $t('ContactForm.buttons.submit') }}
+          {{ $t('ContactForm.buttons.send') }}
         </v-btn>
 
         <v-btn class="btn-clear-form" @click.prevent="handleReset">
