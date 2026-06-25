@@ -222,18 +222,15 @@ export default {
     projectsList() {
       const images = [
         require('@/assets/images/project-b2.webp'),
-        require('@/assets/images/project-salus.webp'),
         require('@/assets/images/project-izi_pdv.webp')
       ];
       const ghLinks = [
         [ 'https://github.com/LucasCosta0117/b2-engenharia' ],
-        [ 'https://github.com/LucasCosta0117/landing-page-enxaqueca' ],
         [ 'https://github.com/LucasCosta0117/pdv-chaveiro-front', 'https://github.com/LucasCosta0117/pdv-chaveiro-back' ]
       ];
       const webLinks = [
         'https://www.b2engenhariaeconstrucao.com.br/',
-        'https://salusbooks.com.br/',
-        ''
+        'https://izipdv.com.br/'
       ];
 
       let finalList = this.$tm('projects.items');
