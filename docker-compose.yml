@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  portfolio:
+    build: .
+    container_name: meu_portfolio
+    restart: always
+    ports:
+      - "8081:80"
