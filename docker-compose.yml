@@ -4,5 +4,9 @@ services:
     build: .
     container_name: meu_portfolio
     restart: always
-    ports:
-      - "8081:80"
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
